@@ -1,4 +1,4 @@
-# asana-preview
+# asana-preview [![PyPi Version][pypi-image]][pypi-url]
 This is the interface for interacting with the Asana platform
 
 - Package version: 1.0.0
@@ -10,12 +10,9 @@ Python >=3.6
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
-
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install asana-preview
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
 ```python
@@ -92,3 +89,6 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**get_user**](docs/UsersApi.md#get_user) | **GET** /users/{user_gid} | Get a user
 
 
+
+[pypi-url]: https://pypi.python.org/pypi/asana-preview/
+[pypi-image]: https://img.shields.io/pypi/v/asana-preview.svg?style=flat-square
