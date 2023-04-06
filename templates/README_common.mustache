@@ -1,0 +1,37 @@
+```python
+import {{{packageName}}}
+from {{apiPackage}} import users_api
+from pprint import pprint
+{{> python_doc_auth_partial}}
+# Enter a context with an instance of the API client
+with asana.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = users_api.UsersApi(api_client)
+    user_gid = "me" # str | A string identifying a user. This can either be the string "me", an email, or the gid of a user.
+    opt_fields = ["email", "name", "workspaces"] # [str] | Defines fields to return.  Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.  The gid of included objects will always be returned, regardless of the field options. (optional)
+
+    # Example passing only required values
+    try:
+        # Get a user
+        user = api_instance.get_user(user_gid)
+        pprint(user)
+    except asana.ApiException as e:
+        print("Exception when calling UsersApi->get_user: %s\n" % e)
+
+    # Example using opt_fields
+    try:
+        # Get a user with opt_fields
+        user = api_instance.get_user(user_gid, opt_fields=opt_fields)
+        pprint(user)
+    except asana.ApiException as e:
+        print("Exception when calling UsersApi->get_user: %s\n" % e)
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *{{basePath}}*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+{{#apiInfo}}{{#apis}}{{#operations}}{{#operation}}*{{classname}}* | [**{{operationId}}**]({{apiDocPath}}{{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{summary}}
+{{/operation}}{{/operations}}{{/apis}}{{/apiInfo}}
