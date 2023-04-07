@@ -13,15 +13,18 @@
 __version__ = "1.0.1"
 
 # import ApiClient
-from asana_preview.api_client import ApiClient
+from asana.api_client import ApiClient
 
 # import Configuration
-from asana_preview.configuration import Configuration
+from asana.configuration import Configuration
 
 # import exceptions
-from asana_preview.exceptions import OpenApiException
-from asana_preview.exceptions import ApiAttributeError
-from asana_preview.exceptions import ApiTypeError
-from asana_preview.exceptions import ApiValueError
-from asana_preview.exceptions import ApiKeyError
-from asana_preview.exceptions import ApiException
+from asana.exceptions import OpenApiException
+from asana.exceptions import ApiAttributeError
+from asana.exceptions import ApiTypeError
+from asana.exceptions import ApiValueError
+from asana.exceptions import ApiKeyError
+from asana.exceptions import ApiException
+
+# import Client
+from asana.client import Client
