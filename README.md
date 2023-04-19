@@ -2,7 +2,7 @@
 
 This is a [preview version](https://forum.asana.com/t/try-an-early-preview-of-our-new-node-js-and-python-sdks/394881) of Asana's new python client library. For feedback and feature requests, please leave a comment on [this forum thread](https://forum.asana.com/t/try-an-early-preview-of-our-new-node-js-and-python-sdks/394881) or through [the feedback form on our documentation site](https://form-beta.asana.com/?k=C4sELCq6hAUsoWEY0kJwAA&d=15793206719)
 
-- Package version: 1.0.2
+- Package version: 1.0.3
 
 ## Requirements.
 
@@ -49,7 +49,7 @@ configuration = asana_preview.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with asana.ApiClient(configuration) as api_client:
+with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = users_api.UsersApi(api_client)
     user_gid = "me" # str | A string identifying a user. This can either be the string "me", an email, or the gid of a user.
