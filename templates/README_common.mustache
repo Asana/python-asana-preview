@@ -15,7 +15,7 @@ with {{{packageName}}}.ApiClient(configuration) as api_client:
         # Get a user
         user = api_instance.get_user(user_gid)
         pprint(user)
-    except asana.ApiException as e:
+    except {{{packageName}}}.ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
 
     # Example using opt_fields
@@ -23,7 +23,7 @@ with {{{packageName}}}.ApiClient(configuration) as api_client:
         # Get a user with opt_fields
         user = api_instance.get_user(user_gid, opt_fields=opt_fields)
         pprint(user)
-    except asana.ApiException as e:
+    except {{{packageName}}}.ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
 ```
 

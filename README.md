@@ -2,7 +2,7 @@
 
 This is a [preview version](https://forum.asana.com/t/try-an-early-preview-of-our-new-node-js-and-python-sdks/394881) of Asana's new python client library. For feedback and feature requests, please leave a comment on [this forum thread](https://forum.asana.com/t/try-an-early-preview-of-our-new-node-js-and-python-sdks/394881) or through [the feedback form on our documentation site](https://form-beta.asana.com/?k=C4sELCq6hAUsoWEY0kJwAA&d=15793206719)
 
-- Package version: 1.0.3
+- Package version: 1.0.4
 
 ## Requirements.
 
@@ -60,7 +60,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         # Get a user
         user = api_instance.get_user(user_gid)
         pprint(user)
-    except asana.ApiException as e:
+    except asana_preview.ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
 
     # Example using opt_fields
@@ -68,7 +68,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         # Get a user with opt_fields
         user = api_instance.get_user(user_gid, opt_fields=opt_fields)
         pprint(user)
-    except asana.ApiException as e:
+    except asana_preview.ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
 ```
 
