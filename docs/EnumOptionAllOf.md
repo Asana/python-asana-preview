@@ -5,7 +5,6 @@ Enum options are the possible values which an enum custom field can adopt. An en
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_type** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **name** | **str** | The name of the enum option. | [optional] 
 **enabled** | **bool** | Whether or not the enum option is a selectable value for the custom field. | [optional] 
 **color** | **str** | The color of the enum option. Defaults to ‘none’. | [optional] 

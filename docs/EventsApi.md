@@ -16,14 +16,14 @@ Returns the full record for all events that have occurred since the sync token w
 
 ### Example
 
-* Bearer Authentication (personal_access_token):
+* Bearer Authentication (personalAccessToken):
 
 ```python
 import asana_preview
 from asana_preview.api import events_api
 from pprint import pprint
 
-# Configure Bearer authorization: personal_access_token
+# Configure Bearer authorization: personalAccessToken
 configuration = asana_preview.Configuration(
     access_token = 'PERSONAL_ACCESS_TOKEN'
 )
@@ -33,9 +33,9 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
     resource = "12345" # str | A resource ID to subscribe to. The resource can be a task or project.
-    sync = "de4774f6915eae04714ca93bb2f5ee81" # str | A sync token received from the last request, or none on first sync. Events will be returned from the point in time that the sync token was generated.  *Note: On your first request, omit the sync token. The response will be the same as for an expired sync token, and will include a new valid sync token.If the sync token is too old (which may happen from time to time) the API will return a `412 Precondition Failed` error, and include a fresh sync token in the response.* (optional)
-    opt_fields = ["gid","resource_type"] # [str] | Defines fields to return.  Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.  The gid of included objects will always be returned, regardless of the field options. (optional)
+    sync = "de4774f6915eae04714ca93bb2f5ee81" # str | A sync token received from the last request, or none on first sync. Events will be returned from the point in time that the sync token was generated. *Note: On your first request, omit the sync token. The response will be the same as for an expired sync token, and will include a new valid sync token.If the sync token is too old (which may happen from time to time) the API will return a `412 Precondition Failed` error, and include a fresh sync token in the response.* (optional)
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
+    opt_fields = ["parent","created_at","type","resource","action","change","user"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -49,7 +49,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get events on a resource
-        api_response = api_instance.get_events(resource, sync=sync, opt_fields=opt_fields, opt_pretty=opt_pretty)
+        api_response = api_instance.get_events(resource, sync=sync, opt_pretty=opt_pretty, opt_fields=opt_fields)
         pprint(api_response)
     except asana_preview.ApiException as e:
         print("Exception when calling EventsApi->get_events: %s\n" % e)
@@ -60,9 +60,9 @@ with asana_preview.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **resource** | **str**| A resource ID to subscribe to. The resource can be a task or project. |
- **sync** | **str**| A sync token received from the last request, or none on first sync. Events will be returned from the point in time that the sync token was generated.  *Note: On your first request, omit the sync token. The response will be the same as for an expired sync token, and will include a new valid sync token.If the sync token is too old (which may happen from time to time) the API will return a &#x60;412 Precondition Failed&#x60; error, and include a fresh sync token in the response.* | [optional]
- **opt_fields** | **[str]**| Defines fields to return.  Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.  The gid of included objects will always be returned, regardless of the field options. | [optional]
+ **sync** | **str**| A sync token received from the last request, or none on first sync. Events will be returned from the point in time that the sync token was generated. *Note: On your first request, omit the sync token. The response will be the same as for an expired sync token, and will include a new valid sync token.If the sync token is too old (which may happen from time to time) the API will return a &#x60;412 Precondition Failed&#x60; error, and include a fresh sync token in the response.* | [optional]
  **opt_pretty** | **bool**| Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. | [optional]
+ **opt_fields** | **[str]**| This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. | [optional]
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[personal_access_token](../README.md#personal_access_token)
+[personalAccessToken](../README.md#personalAccessToken)
 
 ### HTTP request headers
 
@@ -87,7 +87,6 @@ Name | Type | Description  | Notes
 **401** | A valid authentication token was not provided with the request, so the API could not associate a user with the request. |  -  |
 **403** | The authentication and request syntax was valid but the server is refusing to complete the request. This can happen if you try to read or write to objects or properties that the user does not have access to. |  -  |
 **404** | Either the request method and path supplied do not specify a known action in the API, or the object specified by the request does not exist. |  -  |
-**412** | The precondition failed. This can happen when the sync token is invalid or too old. Use the new sync token provided to get make the next call. |  -  |
 **500** | There was a problem on Asana’s end. In the event of a server error the response body should contain an error phrase. These phrases can be used by Asana support to quickly look up the incident that caused the server error. Some errors are due to server load, and will not supply an error phrase. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
