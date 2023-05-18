@@ -77,12 +77,12 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/1.0.5/python'
+        self.user_agent = 'OpenAPI-Generator/1.0.6/python'
         # Add custom header
         self.default_headers['X-Asana-Client-Lib'] = urlencode(
             {
                 'language': 'PythonPreview',
-                'version': "1.0.5",
+                'version': "1.0.6",
                 'language_version': platform.python_version(),
                 'os': platform.system(),
                 'os_version': platform.release()
