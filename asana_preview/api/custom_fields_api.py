@@ -76,30 +76,30 @@ class CustomFieldsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CURRENCY_CODE": "currency_code",
                         "CREATED_BY": "created_by",
-                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
-                        "ENUM_OPTIONS": "enum_options",
-                        "TEXT_VALUE": "text_value",
-                        "DISPLAY_VALUE": "display_value",
-                        "IS_VALUE_READ_ONLY": "is_value_read_only",
-                        "IS_FORMULA_FIELD": "is_formula_field",
-                        "NAME": "name",
-                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "CUSTOM_LABEL": "custom_label",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
-                        "PRECISION": "precision",
-                        "ENUM_VALUE": "enum_value",
-                        "CUSTOM_LABEL_POSITION": "custom_label_position",
-                        "TYPE": "type",
                         "PEOPLE_VALUE": "people_value",
-                        "NUMBER_VALUE": "number_value",
-                        "FORMAT": "format",
                         "DATE_VALUE": "date_value",
+                        "DISPLAY_VALUE": "display_value",
+                        "IS_FORMULA_FIELD": "is_formula_field",
+                        "FORMAT": "format",
+                        "ENUM_OPTIONS": "enum_options",
+                        "NAME": "name",
+                        "CURRENCY_CODE": "currency_code",
+                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "ENABLED": "enabled",
+                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
                         "ASANA_CREATED_FIELD": "asana_created_field",
-                        "DESCRIPTION": "description"
+                        "PRECISION": "precision",
+                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "TYPE": "type",
+                        "IS_VALUE_READ_ONLY": "is_value_read_only",
+                        "TEXT_VALUE": "text_value",
+                        "CUSTOM_LABEL_POSITION": "custom_label_position",
+                        "NUMBER_VALUE": "number_value",
+                        "DESCRIPTION": "description",
+                        "ENUM_VALUE": "enum_value"
                     },
                 },
                 'openapi_types': {
@@ -133,10 +133,10 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -179,8 +179,8 @@ class CustomFieldsApi(object):
                     ('opt_fields',): {
 
                         "COLOR": "color",
-                        "ENABLED": "enabled",
-                        "NAME": "name"
+                        "NAME": "name",
+                        "ENABLED": "enabled"
                     },
                 },
                 'openapi_types': {
@@ -218,10 +218,10 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -276,7 +276,7 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -316,30 +316,30 @@ class CustomFieldsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CURRENCY_CODE": "currency_code",
                         "CREATED_BY": "created_by",
-                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
-                        "ENUM_OPTIONS": "enum_options",
-                        "TEXT_VALUE": "text_value",
-                        "DISPLAY_VALUE": "display_value",
-                        "IS_VALUE_READ_ONLY": "is_value_read_only",
-                        "IS_FORMULA_FIELD": "is_formula_field",
-                        "NAME": "name",
-                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "CUSTOM_LABEL": "custom_label",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
-                        "PRECISION": "precision",
-                        "ENUM_VALUE": "enum_value",
-                        "CUSTOM_LABEL_POSITION": "custom_label_position",
-                        "TYPE": "type",
                         "PEOPLE_VALUE": "people_value",
-                        "NUMBER_VALUE": "number_value",
-                        "FORMAT": "format",
                         "DATE_VALUE": "date_value",
+                        "DISPLAY_VALUE": "display_value",
+                        "IS_FORMULA_FIELD": "is_formula_field",
+                        "FORMAT": "format",
+                        "ENUM_OPTIONS": "enum_options",
+                        "NAME": "name",
+                        "CURRENCY_CODE": "currency_code",
+                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "ENABLED": "enabled",
+                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
                         "ASANA_CREATED_FIELD": "asana_created_field",
-                        "DESCRIPTION": "description"
+                        "PRECISION": "precision",
+                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "TYPE": "type",
+                        "IS_VALUE_READ_ONLY": "is_value_read_only",
+                        "TEXT_VALUE": "text_value",
+                        "CUSTOM_LABEL_POSITION": "custom_label_position",
+                        "NUMBER_VALUE": "number_value",
+                        "DESCRIPTION": "description",
+                        "ENUM_VALUE": "enum_value"
                     },
                 },
                 'openapi_types': {
@@ -366,7 +366,7 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -408,30 +408,30 @@ class CustomFieldsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CURRENCY_CODE": "currency_code",
                         "CREATED_BY": "created_by",
-                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
-                        "ENUM_OPTIONS": "enum_options",
-                        "TEXT_VALUE": "text_value",
-                        "DISPLAY_VALUE": "display_value",
-                        "IS_VALUE_READ_ONLY": "is_value_read_only",
-                        "IS_FORMULA_FIELD": "is_formula_field",
-                        "NAME": "name",
-                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "CUSTOM_LABEL": "custom_label",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
-                        "PRECISION": "precision",
-                        "ENUM_VALUE": "enum_value",
-                        "CUSTOM_LABEL_POSITION": "custom_label_position",
-                        "TYPE": "type",
                         "PEOPLE_VALUE": "people_value",
-                        "NUMBER_VALUE": "number_value",
-                        "FORMAT": "format",
                         "DATE_VALUE": "date_value",
+                        "DISPLAY_VALUE": "display_value",
+                        "IS_FORMULA_FIELD": "is_formula_field",
+                        "FORMAT": "format",
+                        "ENUM_OPTIONS": "enum_options",
+                        "NAME": "name",
+                        "CURRENCY_CODE": "currency_code",
+                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "ENABLED": "enabled",
+                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
                         "ASANA_CREATED_FIELD": "asana_created_field",
-                        "DESCRIPTION": "description"
+                        "PRECISION": "precision",
+                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "TYPE": "type",
+                        "IS_VALUE_READ_ONLY": "is_value_read_only",
+                        "TEXT_VALUE": "text_value",
+                        "CUSTOM_LABEL_POSITION": "custom_label_position",
+                        "NUMBER_VALUE": "number_value",
+                        "DESCRIPTION": "description",
+                        "ENUM_VALUE": "enum_value"
                     },
                 },
                 'openapi_types': {
@@ -466,7 +466,7 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -508,8 +508,8 @@ class CustomFieldsApi(object):
                     ('opt_fields',): {
 
                         "COLOR": "color",
-                        "ENABLED": "enabled",
-                        "NAME": "name"
+                        "NAME": "name",
+                        "ENABLED": "enabled"
                     },
                 },
                 'openapi_types': {
@@ -539,10 +539,10 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -582,30 +582,30 @@ class CustomFieldsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CURRENCY_CODE": "currency_code",
                         "CREATED_BY": "created_by",
-                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
-                        "ENUM_OPTIONS": "enum_options",
-                        "TEXT_VALUE": "text_value",
-                        "DISPLAY_VALUE": "display_value",
-                        "IS_VALUE_READ_ONLY": "is_value_read_only",
-                        "IS_FORMULA_FIELD": "is_formula_field",
-                        "NAME": "name",
-                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "CUSTOM_LABEL": "custom_label",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
-                        "PRECISION": "precision",
-                        "ENUM_VALUE": "enum_value",
-                        "CUSTOM_LABEL_POSITION": "custom_label_position",
-                        "TYPE": "type",
                         "PEOPLE_VALUE": "people_value",
-                        "NUMBER_VALUE": "number_value",
-                        "FORMAT": "format",
                         "DATE_VALUE": "date_value",
+                        "DISPLAY_VALUE": "display_value",
+                        "IS_FORMULA_FIELD": "is_formula_field",
+                        "FORMAT": "format",
+                        "ENUM_OPTIONS": "enum_options",
+                        "NAME": "name",
+                        "CURRENCY_CODE": "currency_code",
+                        "MULTI_ENUM_VALUES": "multi_enum_values",
                         "ENABLED": "enabled",
+                        "HAS_NOTIFICATIONS_ENABLED": "has_notifications_enabled",
                         "ASANA_CREATED_FIELD": "asana_created_field",
-                        "DESCRIPTION": "description"
+                        "PRECISION": "precision",
+                        "IS_GLOBAL_TO_WORKSPACE": "is_global_to_workspace",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "TYPE": "type",
+                        "IS_VALUE_READ_ONLY": "is_value_read_only",
+                        "TEXT_VALUE": "text_value",
+                        "CUSTOM_LABEL_POSITION": "custom_label_position",
+                        "NUMBER_VALUE": "number_value",
+                        "DESCRIPTION": "description",
+                        "ENUM_VALUE": "enum_value"
                     },
                 },
                 'openapi_types': {
@@ -635,10 +635,10 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -679,8 +679,8 @@ class CustomFieldsApi(object):
                     ('opt_fields',): {
 
                         "COLOR": "color",
-                        "ENABLED": "enabled",
-                        "NAME": "name"
+                        "NAME": "name",
+                        "ENABLED": "enabled"
                     },
                 },
                 'openapi_types': {
@@ -710,10 +710,10 @@ class CustomFieldsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

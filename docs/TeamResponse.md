@@ -1,5 +1,6 @@
 # TeamResponse
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **str** | The name of the team. | [optional] 
 **description** | **str** | [Opt In](/docs/inputoutput-options). The description of the team.  | [optional] 
 **html_description** | **str** | [Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML.  | [optional] 
-**organization** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**organization** | [**TeamResponseOrganization**](TeamResponseOrganization.md) |  | [optional] 
 **permalink_url** | **str** | A url that points directly to the object within Asana. | [optional] [readonly] 
 **visibility** | **str** | The visibility of the team to users in the same organization  | [optional] 
 **edit_team_name_or_description_access_level** | **str** | Controls who can edit team name and description  | [optional] 

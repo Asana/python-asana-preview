@@ -43,7 +43,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddUserForWorkspaceRequest | The user to add to the workspace.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["email","name","photo"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["photo","name","email"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -82,8 +82,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -326,8 +326,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -370,7 +370,9 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = workspaces_api.WorkspacesApi(api_client)
     workspace_gid = "12345" # str | Globally unique identifier for the workspace or organization.
     update_workspace_request = UpdateWorkspaceRequest(
-        data=WorkspaceCompact(None),
+        data=WorkspaceRequest(
+            name="My Company Workspace",
+        ),
     ) # UpdateWorkspaceRequest | The workspace object with all updated properties.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     opt_fields = ["name","is_organization","email_domains"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
@@ -412,8 +414,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

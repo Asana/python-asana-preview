@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.status_update_compact import StatusUpdateCompact
-    globals()['StatusUpdateCompact'] = StatusUpdateCompact
+    from asana_preview.model.status_update_response import StatusUpdateResponse
+    globals()['StatusUpdateResponse'] = StatusUpdateResponse
 
 
 class GetStatusesForObject200Response(ModelNormal):
@@ -87,7 +87,7 @@ class GetStatusesForObject200Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([StatusUpdateCompact],),  # noqa: E501
+            'data': ([StatusUpdateResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class GetStatusesForObject200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([StatusUpdateCompact]): [optional]  # noqa: E501
+            data ([StatusUpdateResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class GetStatusesForObject200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([StatusUpdateCompact]): [optional]  # noqa: E501
+            data ([StatusUpdateResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

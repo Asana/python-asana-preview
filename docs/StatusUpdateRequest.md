@@ -1,12 +1,13 @@
 # StatusUpdateRequest
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **text** | **str** | The text content of the status update. | 
 **status_type** | **str** | The type associated with the status update. This represents the current state of the object this object is on. | 
-**parent** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | 
+**parent** | **str** | The id of parent to send this status update to. This can be a project, goal or portfolio. | 
 **gid** | **str** | Globally unique identifier of the resource, as a string. | [optional] [readonly] 
 **resource_type** | **str** | The base type of this resource. | [optional] [readonly] 
 **title** | **str** | The title of the status update. | [optional] 

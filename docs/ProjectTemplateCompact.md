@@ -1,5 +1,6 @@
 # ProjectTemplateCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *project template* is an object that allows new projects to be created with a predefined setup, which may include tasks, sections, Rules, etc. It simplifies the process of running a workflow that involves a similar set of work every time.
 
 ## Properties
 Name | Type | Description | Notes

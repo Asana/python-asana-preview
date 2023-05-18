@@ -41,7 +41,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     resource_gid = "resource_gid_example" # str | Filter to events with this resource ID. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["event_category","created_at","resource","event_type","details","actor","context"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["resource","context","event_type","actor","event_category","created_at","details"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

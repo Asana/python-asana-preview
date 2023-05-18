@@ -34,7 +34,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = jobs_api.JobsApi(api_client)
     job_gid = "12345" # str | Globally unique identifier for the job.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["status","resource_subtype","new_project_template","new_task","new_task_template","new_project"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_project","status","resource_subtype","new_task_template","new_project_template","new_task"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

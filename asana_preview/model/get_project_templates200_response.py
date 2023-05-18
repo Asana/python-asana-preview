@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.project_template_compact import ProjectTemplateCompact
-    globals()['ProjectTemplateCompact'] = ProjectTemplateCompact
+    from asana_preview.model.project_template_response import ProjectTemplateResponse
+    globals()['ProjectTemplateResponse'] = ProjectTemplateResponse
 
 
 class GetProjectTemplates200Response(ModelNormal):
@@ -87,7 +87,7 @@ class GetProjectTemplates200Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([ProjectTemplateCompact],),  # noqa: E501
+            'data': ([ProjectTemplateResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class GetProjectTemplates200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([ProjectTemplateCompact]): [optional]  # noqa: E501
+            data ([ProjectTemplateResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class GetProjectTemplates200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([ProjectTemplateCompact]): [optional]  # noqa: E501
+            data ([ProjectTemplateResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

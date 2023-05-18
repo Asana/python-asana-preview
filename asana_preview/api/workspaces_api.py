@@ -78,9 +78,9 @@ class WorkspacesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "EMAIL": "email",
+                        "PHOTO": "photo",
                         "NAME": "name",
-                        "PHOTO": "photo"
+                        "EMAIL": "email"
                     },
                 },
                 'openapi_types': {
@@ -110,10 +110,10 @@ class WorkspacesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -181,7 +181,7 @@ class WorkspacesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -253,7 +253,7 @@ class WorkspacesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -314,10 +314,10 @@ class WorkspacesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -390,10 +390,10 @@ class WorkspacesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

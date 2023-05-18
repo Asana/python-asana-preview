@@ -1,5 +1,6 @@
 # SectionCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
 
 ## Properties
 Name | Type | Description | Notes

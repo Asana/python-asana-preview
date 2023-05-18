@@ -30,10 +30,10 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.date_variable_request import DateVariableRequest
-    from asana_preview.model.requested_role_request import RequestedRoleRequest
-    globals()['DateVariableRequest'] = DateVariableRequest
-    globals()['RequestedRoleRequest'] = RequestedRoleRequest
+    from asana_preview.model.project_template_instantiate_project_request_requested_dates_inner import ProjectTemplateInstantiateProjectRequestRequestedDatesInner
+    from asana_preview.model.project_template_instantiate_project_request_requested_roles_inner import ProjectTemplateInstantiateProjectRequestRequestedRolesInner
+    globals()['ProjectTemplateInstantiateProjectRequestRequestedDatesInner'] = ProjectTemplateInstantiateProjectRequestRequestedDatesInner
+    globals()['ProjectTemplateInstantiateProjectRequestRequestedRolesInner'] = ProjectTemplateInstantiateProjectRequestRequestedRolesInner
 
 
 class ProjectTemplateInstantiateProjectRequest(ModelNormal):
@@ -61,6 +61,11 @@ class ProjectTemplateInstantiateProjectRequest(ModelNormal):
     """
 
     allowed_values = {
+        ('privacy_setting',): {
+            'PUBLIC_TO_WORKSPACE': "public_to_workspace",
+            'PRIVATE_TO_TEAM': "private_to_team",
+            'PRIVATE': "private",
+        },
     }
 
     validations = {
@@ -92,9 +97,10 @@ class ProjectTemplateInstantiateProjectRequest(ModelNormal):
             'name': (str,),  # noqa: E501
             'team': (str,),  # noqa: E501
             'public': (bool,),  # noqa: E501
+            'privacy_setting': (str,),  # noqa: E501
             'is_strict': (bool,),  # noqa: E501
-            'requested_dates': ([DateVariableRequest],),  # noqa: E501
-            'requested_roles': ([RequestedRoleRequest],),  # noqa: E501
+            'requested_dates': ([ProjectTemplateInstantiateProjectRequestRequestedDatesInner],),  # noqa: E501
+            'requested_roles': ([ProjectTemplateInstantiateProjectRequestRequestedRolesInner],),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +112,7 @@ class ProjectTemplateInstantiateProjectRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'team': 'team',  # noqa: E501
         'public': 'public',  # noqa: E501
+        'privacy_setting': 'privacy_setting',  # noqa: E501
         'is_strict': 'is_strict',  # noqa: E501
         'requested_dates': 'requested_dates',  # noqa: E501
         'requested_roles': 'requested_roles',  # noqa: E501
@@ -157,9 +164,10 @@ class ProjectTemplateInstantiateProjectRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             team (str): *Optional*. Sets the team of the new project. If the project template exists in an _organization_, you may specify a value for `team`. If no value is provided then it defaults to the same team as the project template.. [optional]  # noqa: E501
             public (bool): Sets the project to public to its team.. [optional]  # noqa: E501
+            privacy_setting (str): The privacy setting of the project. [optional]  # noqa: E501
             is_strict (bool): *Optional*. If set to `true`, the endpoint returns an \"Unprocessable Entity\" error if you fail to provide a calendar date value for any date variable. If set to `false`, a default date is used for each unfulfilled date variable (e.g., the current date is used as the Start Date of a project).. [optional]  # noqa: E501
-            requested_dates ([DateVariableRequest]): Array of mappings of date variables to calendar dates.. [optional]  # noqa: E501
-            requested_roles ([RequestedRoleRequest]): Array of mappings of template roles to user ids. [optional]  # noqa: E501
+            requested_dates ([ProjectTemplateInstantiateProjectRequestRequestedDatesInner]): Array of mappings of date variables to calendar dates.. [optional]  # noqa: E501
+            requested_roles ([ProjectTemplateInstantiateProjectRequestRequestedRolesInner]): Array of mappings of template roles to user ids. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,9 +259,10 @@ class ProjectTemplateInstantiateProjectRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             team (str): *Optional*. Sets the team of the new project. If the project template exists in an _organization_, you may specify a value for `team`. If no value is provided then it defaults to the same team as the project template.. [optional]  # noqa: E501
             public (bool): Sets the project to public to its team.. [optional]  # noqa: E501
+            privacy_setting (str): The privacy setting of the project. [optional]  # noqa: E501
             is_strict (bool): *Optional*. If set to `true`, the endpoint returns an \"Unprocessable Entity\" error if you fail to provide a calendar date value for any date variable. If set to `false`, a default date is used for each unfulfilled date variable (e.g., the current date is used as the Start Date of a project).. [optional]  # noqa: E501
-            requested_dates ([DateVariableRequest]): Array of mappings of date variables to calendar dates.. [optional]  # noqa: E501
-            requested_roles ([RequestedRoleRequest]): Array of mappings of template roles to user ids. [optional]  # noqa: E501
+            requested_dates ([ProjectTemplateInstantiateProjectRequestRequestedDatesInner]): Array of mappings of date variables to calendar dates.. [optional]  # noqa: E501
+            requested_roles ([ProjectTemplateInstantiateProjectRequestRequestedRolesInner]): Array of mappings of template roles to user ids. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.time_period_compact import TimePeriodCompact
-    globals()['TimePeriodCompact'] = TimePeriodCompact
+    from asana_preview.model.time_period_response import TimePeriodResponse
+    globals()['TimePeriodResponse'] = TimePeriodResponse
 
 
 class GetTimePeriods200Response(ModelNormal):
@@ -87,7 +87,7 @@ class GetTimePeriods200Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([TimePeriodCompact],),  # noqa: E501
+            'data': ([TimePeriodResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class GetTimePeriods200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([TimePeriodCompact]): [optional]  # noqa: E501
+            data ([TimePeriodResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class GetTimePeriods200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([TimePeriodCompact]): [optional]  # noqa: E501
+            data ([TimePeriodResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

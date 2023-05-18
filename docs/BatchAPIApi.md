@@ -35,11 +35,11 @@ with asana_preview.ApiClient(configuration) as api_client:
     create_batch_request_request = CreateBatchRequestRequest(
         data=BatchRequest(
             actions=[
-                BatchRequestAction(
+                BatchRequestActionsInner(
                     relative_path="/tasks/123",
                     method="get",
                     data={},
-                    options=BatchRequestActionOptions(
+                    options=BatchRequestActionsInnerOptions(
                         limit=50,
                         offset=1,
                         fields=["name","gid","notes","completed"],
@@ -87,8 +87,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

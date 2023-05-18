@@ -1,5 +1,6 @@
 # EventResponseParent
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. For added/removed events, the parent object that resource was added to or removed from. The parent will be `null` for other event types.
 
 ## Properties
 Name | Type | Description | Notes

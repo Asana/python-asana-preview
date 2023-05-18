@@ -1,5 +1,6 @@
 # ProjectBriefBase
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *Project Brief* allows you to explain the what and why of the project to your team.
 
 ## Properties
 Name | Type | Description | Notes

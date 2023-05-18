@@ -37,7 +37,13 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = memberships_api.MembershipsApi(api_client)
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     create_membership_request = CreateMembershipRequest(
-        data=CreateMembershipRequest(None),
+        data=CreateMembershipRequest(
+            is_active=True,
+            is_guest=True,
+            is_admin=False,
+            member="12345",
+            parent="true",
+        ),
     ) # CreateMembershipRequest | The updated fields for the membership. (optional)
 
     # Example passing only required values which don't have defaults set
@@ -67,8 +73,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -148,7 +154,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -230,7 +236,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -317,8 +323,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

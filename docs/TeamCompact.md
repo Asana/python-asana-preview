@@ -1,5 +1,6 @@
 # TeamCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 
 ## Properties
 Name | Type | Description | Notes

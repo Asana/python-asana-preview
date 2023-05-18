@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.user_compact import UserCompact
-    globals()['UserCompact'] = UserCompact
+    from asana_preview.model.custom_field_response_people_value_inner import CustomFieldResponsePeopleValueInner
+    globals()['CustomFieldResponsePeopleValueInner'] = CustomFieldResponsePeopleValueInner
 
 
 class Like(ModelNormal):
@@ -88,7 +88,7 @@ class Like(ModelNormal):
         lazy_import()
         return {
             'gid': (str,),  # noqa: E501
-            'user': (UserCompact,),  # noqa: E501
+            'user': (CustomFieldResponsePeopleValueInner,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class Like(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             gid (str): Globally unique identifier of the object, as a string.. [optional]  # noqa: E501
-            user (UserCompact): [optional]  # noqa: E501
+            user (CustomFieldResponsePeopleValueInner): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -231,7 +231,7 @@ class Like(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             gid (str): Globally unique identifier of the object, as a string.. [optional]  # noqa: E501
-            user (UserCompact): [optional]  # noqa: E501
+            user (CustomFieldResponsePeopleValueInner): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -1,5 +1,6 @@
 # UserCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 
 ## Properties
 Name | Type | Description | Notes

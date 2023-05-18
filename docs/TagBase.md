@@ -1,5 +1,6 @@
 # TagBase
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
 
 ## Properties
 Name | Type | Description | Notes

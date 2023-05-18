@@ -121,7 +121,7 @@ class UsersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -161,10 +161,10 @@ class UsersApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "EMAIL": "email",
+                        "PHOTO": "photo",
                         "NAME": "name",
-                        "WORKSPACES": "workspaces",
-                        "PHOTO": "photo"
+                        "EMAIL": "email",
+                        "WORKSPACES": "workspaces"
                     },
                 },
                 'openapi_types': {
@@ -191,7 +191,7 @@ class UsersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -232,10 +232,10 @@ class UsersApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "EMAIL": "email",
+                        "PHOTO": "photo",
                         "NAME": "name",
-                        "WORKSPACES": "workspaces",
-                        "PHOTO": "photo"
+                        "EMAIL": "email",
+                        "WORKSPACES": "workspaces"
                     },
                 },
                 'openapi_types': {
@@ -274,7 +274,7 @@ class UsersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -315,10 +315,10 @@ class UsersApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "EMAIL": "email",
+                        "PHOTO": "photo",
                         "NAME": "name",
-                        "WORKSPACES": "workspaces",
-                        "PHOTO": "photo"
+                        "EMAIL": "email",
+                        "WORKSPACES": "workspaces"
                     },
                 },
                 'openapi_types': {
@@ -349,7 +349,7 @@ class UsersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -390,10 +390,10 @@ class UsersApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "EMAIL": "email",
+                        "PHOTO": "photo",
                         "NAME": "name",
-                        "WORKSPACES": "workspaces",
-                        "PHOTO": "photo"
+                        "EMAIL": "email",
+                        "WORKSPACES": "workspaces"
                     },
                 },
                 'openapi_types': {
@@ -424,7 +424,7 @@ class UsersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

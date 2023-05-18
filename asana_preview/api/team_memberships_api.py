@@ -71,11 +71,11 @@ class TeamMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "USER": "user",
                         "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
-                        "TEAM": "team",
                         "IS_LIMITED_ACCESS": "is_limited_access",
-                        "USER": "user"
+                        "IS_GUEST": "is_guest",
+                        "TEAM": "team"
                     },
                 },
                 'openapi_types': {
@@ -102,7 +102,7 @@ class TeamMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -144,11 +144,11 @@ class TeamMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "USER": "user",
                         "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
-                        "TEAM": "team",
                         "IS_LIMITED_ACCESS": "is_limited_access",
-                        "USER": "user"
+                        "IS_GUEST": "is_guest",
+                        "TEAM": "team"
                     },
                 },
                 'openapi_types': {
@@ -191,7 +191,7 @@ class TeamMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -233,11 +233,11 @@ class TeamMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "USER": "user",
                         "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
-                        "TEAM": "team",
                         "IS_LIMITED_ACCESS": "is_limited_access",
-                        "USER": "user"
+                        "IS_GUEST": "is_guest",
+                        "TEAM": "team"
                     },
                 },
                 'openapi_types': {
@@ -272,7 +272,7 @@ class TeamMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -316,11 +316,11 @@ class TeamMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "USER": "user",
                         "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
-                        "TEAM": "team",
                         "IS_LIMITED_ACCESS": "is_limited_access",
-                        "USER": "user"
+                        "IS_GUEST": "is_guest",
+                        "TEAM": "team"
                     },
                 },
                 'openapi_types': {
@@ -359,7 +359,7 @@ class TeamMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

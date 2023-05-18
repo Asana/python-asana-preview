@@ -71,11 +71,11 @@ class TimePeriodsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "END_ON": "end_on",
                         "START_ON": "start_on",
                         "PERIOD": "period",
-                        "DISPLAY_NAME": "display_name"
+                        "DISPLAY_NAME": "display_name",
+                        "END_ON": "end_on",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -102,7 +102,7 @@ class TimePeriodsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -146,11 +146,11 @@ class TimePeriodsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "END_ON": "end_on",
                         "START_ON": "start_on",
                         "PERIOD": "period",
-                        "DISPLAY_NAME": "display_name"
+                        "DISPLAY_NAME": "display_name",
+                        "END_ON": "end_on",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -193,7 +193,7 @@ class TimePeriodsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

@@ -98,10 +98,10 @@ class RulesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

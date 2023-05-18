@@ -42,9 +42,49 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["currency_code","created_by","is_global_to_workspace","enum_options","text_value","display_value","is_value_read_only","is_formula_field","name","multi_enum_values","custom_label","resource_subtype","has_notifications_enabled","precision","enum_value","custom_label_position","type","people_value","number_value","format","date_value","enabled","asana_created_field","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["created_by","custom_label","people_value","date_value","display_value","is_formula_field","format","enum_options","name","currency_code","multi_enum_values","enabled","has_notifications_enabled","asana_created_field","precision","is_global_to_workspace","resource_subtype","type","is_value_read_only","text_value","custom_label_position","number_value","description","enum_value"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     create_custom_field_request = CreateCustomFieldRequest(
-        data=CustomFieldRequest(None),
+        data=CustomFieldRequest(
+            name="Status",
+            resource_subtype="text",
+            enum_options=[
+                CustomFieldBaseEnumOptionsInner(
+                    name="Low",
+                    enabled=True,
+                    color="blue",
+                ),
+            ],
+            enabled=True,
+            is_formula_field=False,
+            date_value=CustomFieldBaseDateValue(
+                date="2024-08-23",
+                date_time="2024-08-23T22:00:00.000Z",
+            ),
+            enum_value=CustomFieldBaseEnumValue(
+                name="Low",
+                enabled=True,
+                color="blue",
+            ),
+            multi_enum_values=[
+                CustomFieldBaseEnumOptionsInner(
+                    name="Low",
+                    enabled=True,
+                    color="blue",
+                ),
+            ],
+            number_value=5.2,
+            text_value="Some Value",
+            description="Development team priority",
+            precision=2,
+            format="custom",
+            currency_code="EUR",
+            custom_label="gold pieces",
+            custom_label_position="suffix",
+            has_notifications_enabled=True,
+            workspace="1331",
+            owned_by_app=True,
+            people_value=["12345"],
+        ),
     ) # CreateCustomFieldRequest | The custom field object to create. (optional)
 
     # Example passing only required values which don't have defaults set
@@ -77,8 +117,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -123,9 +163,15 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["color","enabled","name"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["color","name","enabled"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     create_enum_option_for_custom_field_request = CreateEnumOptionForCustomFieldRequest(
-        data=EnumOptionRequest(None),
+        data=EnumOptionRequest(
+            name="Low",
+            enabled=True,
+            color="blue",
+            insert_before="12345",
+            insert_after="12345",
+        ),
     ) # CreateEnumOptionForCustomFieldRequest | The enum option object to create. (optional)
 
     # Example passing only required values which don't have defaults set
@@ -167,8 +213,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -248,7 +294,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -291,7 +337,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = custom_fields_api.CustomFieldsApi(api_client)
     custom_field_gid = "12345" # str | Globally unique identifier for the custom field.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["currency_code","created_by","is_global_to_workspace","enum_options","text_value","display_value","is_value_read_only","is_formula_field","name","multi_enum_values","custom_label","resource_subtype","has_notifications_enabled","precision","enum_value","custom_label_position","type","people_value","number_value","format","date_value","enabled","asana_created_field","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["created_by","custom_label","people_value","date_value","display_value","is_formula_field","format","enum_options","name","currency_code","multi_enum_values","enabled","has_notifications_enabled","asana_created_field","precision","is_global_to_workspace","resource_subtype","type","is_value_read_only","text_value","custom_label_position","number_value","description","enum_value"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -330,7 +376,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -375,7 +421,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["currency_code","created_by","is_global_to_workspace","enum_options","text_value","display_value","is_value_read_only","is_formula_field","name","multi_enum_values","custom_label","resource_subtype","has_notifications_enabled","precision","enum_value","custom_label_position","type","people_value","number_value","format","date_value","enabled","asana_created_field","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["created_by","custom_label","people_value","date_value","display_value","is_formula_field","format","enum_options","name","currency_code","multi_enum_values","enabled","has_notifications_enabled","asana_created_field","precision","is_global_to_workspace","resource_subtype","type","is_value_read_only","text_value","custom_label_position","number_value","description","enum_value"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -416,7 +462,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -459,7 +505,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = custom_fields_api.CustomFieldsApi(api_client)
     custom_field_gid = "12345" # str | Globally unique identifier for the custom field.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["color","enabled","name"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["color","name","enabled"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     insert_enum_option_for_custom_field_request = InsertEnumOptionForCustomFieldRequest(
         data=EnumOptionInsertRequest(
             enum_option="97285",
@@ -505,8 +551,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -549,9 +595,49 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = custom_fields_api.CustomFieldsApi(api_client)
     custom_field_gid = "12345" # str | Globally unique identifier for the custom field.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["currency_code","created_by","is_global_to_workspace","enum_options","text_value","display_value","is_value_read_only","is_formula_field","name","multi_enum_values","custom_label","resource_subtype","has_notifications_enabled","precision","enum_value","custom_label_position","type","people_value","number_value","format","date_value","enabled","asana_created_field","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["created_by","custom_label","people_value","date_value","display_value","is_formula_field","format","enum_options","name","currency_code","multi_enum_values","enabled","has_notifications_enabled","asana_created_field","precision","is_global_to_workspace","resource_subtype","type","is_value_read_only","text_value","custom_label_position","number_value","description","enum_value"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     create_custom_field_request = CreateCustomFieldRequest(
-        data=CustomFieldRequest(None),
+        data=CustomFieldRequest(
+            name="Status",
+            resource_subtype="text",
+            enum_options=[
+                CustomFieldBaseEnumOptionsInner(
+                    name="Low",
+                    enabled=True,
+                    color="blue",
+                ),
+            ],
+            enabled=True,
+            is_formula_field=False,
+            date_value=CustomFieldBaseDateValue(
+                date="2024-08-23",
+                date_time="2024-08-23T22:00:00.000Z",
+            ),
+            enum_value=CustomFieldBaseEnumValue(
+                name="Low",
+                enabled=True,
+                color="blue",
+            ),
+            multi_enum_values=[
+                CustomFieldBaseEnumOptionsInner(
+                    name="Low",
+                    enabled=True,
+                    color="blue",
+                ),
+            ],
+            number_value=5.2,
+            text_value="Some Value",
+            description="Development team priority",
+            precision=2,
+            format="custom",
+            currency_code="EUR",
+            custom_label="gold pieces",
+            custom_label_position="suffix",
+            has_notifications_enabled=True,
+            workspace="1331",
+            owned_by_app=True,
+            people_value=["12345"],
+        ),
     ) # CreateCustomFieldRequest | The custom field object with all updated properties. (optional)
 
     # Example passing only required values which don't have defaults set
@@ -591,8 +677,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -635,9 +721,15 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = custom_fields_api.CustomFieldsApi(api_client)
     enum_option_gid = "124578" # str | Globally unique identifier for the enum option.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["color","enabled","name"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["color","name","enabled"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     create_enum_option_for_custom_field_request = CreateEnumOptionForCustomFieldRequest(
-        data=EnumOptionRequest(None),
+        data=EnumOptionRequest(
+            name="Low",
+            enabled=True,
+            color="blue",
+            insert_before="12345",
+            insert_after="12345",
+        ),
     ) # CreateEnumOptionForCustomFieldRequest | The enum option object to update (optional)
 
     # Example passing only required values which don't have defaults set
@@ -677,8 +769,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

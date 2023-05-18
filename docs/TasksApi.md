@@ -102,8 +102,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -191,8 +191,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -281,8 +281,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -367,8 +367,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -411,10 +411,37 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = tasks_api.TasksApi(api_client)
     task_gid = "321654" # str | The task to operate on.
     create_task_request = CreateTaskRequest(
-        data=TaskRequest(None),
+        data=TaskRequest(
+            name="Buy catnip",
+            resource_subtype="default_task",
+            approval_status="pending",
+            assignee_status="upcoming",
+            completed=False,
+            due_at=dateutil_parser('1970-01-01').date(),
+            due_on=dateutil_parser('Sat Sep 14 17:00:00 PDT 2019').date(),
+            external=TaskBaseExternal(
+                gid="1234",
+                data="A blob of information.",
+            ),
+            html_notes="<body>Mittens <em>really</em> likes the stuff from Humboldt.</body>",
+            liked=True,
+            notes="Mittens really likes the stuff from Humboldt.",
+            start_at=dateutil_parser('1970-01-01').date(),
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            assignee="12345",
+            assignee_section="12345",
+            custom_fields={
+                "key": "key_example",
+            },
+            followers=["12345"],
+            parent="12345",
+            projects=["12345"],
+            tags=["12345"],
+            workspace="12345",
+        ),
     ) # CreateTaskRequest | The new subtask to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -453,8 +480,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -496,10 +523,37 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tasks_api.TasksApi(api_client)
     create_task_request = CreateTaskRequest(
-        data=TaskRequest(None),
+        data=TaskRequest(
+            name="Buy catnip",
+            resource_subtype="default_task",
+            approval_status="pending",
+            assignee_status="upcoming",
+            completed=False,
+            due_at=dateutil_parser('1970-01-01').date(),
+            due_on=dateutil_parser('Sat Sep 14 17:00:00 PDT 2019').date(),
+            external=TaskBaseExternal(
+                gid="1234",
+                data="A blob of information.",
+            ),
+            html_notes="<body>Mittens <em>really</em> likes the stuff from Humboldt.</body>",
+            liked=True,
+            notes="Mittens really likes the stuff from Humboldt.",
+            start_at=dateutil_parser('1970-01-01').date(),
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            assignee="12345",
+            assignee_section="12345",
+            custom_fields={
+                "key": "key_example",
+            },
+            followers=["12345"],
+            parent="12345",
+            projects=["12345"],
+            tags=["12345"],
+            workspace="12345",
+        ),
     ) # CreateTaskRequest | The task to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -537,8 +591,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -618,7 +672,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -667,7 +721,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # DuplicateTaskRequest | Describes the duplicate's name and the fields that will be duplicated.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["status","resource_subtype","new_project_template","new_task","new_task_template","new_project"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_project","status","resource_subtype","new_task_template","new_project_template","new_task"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -706,8 +760,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -752,7 +806,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -793,7 +847,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -839,7 +893,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -880,7 +934,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -926,7 +980,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -967,7 +1021,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1010,7 +1064,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = tasks_api.TasksApi(api_client)
     task_gid = "321654" # str | The task to operate on.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1049,7 +1103,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1099,7 +1153,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     workspace = "321654" # str | The workspace to filter tasks on. *Note: If you specify `workspace`, you must also specify the `assignee` to filter on.* (optional)
     completed_since = dateutil_parser('2012-02-22T02:06:58.158Z') # datetime | Only return tasks that are either incomplete or that have been completed since this time. (optional)
     modified_since = dateutil_parser('2012-02-22T02:06:58.158Z') # datetime | Only return tasks that have been modified since the given time.  *Note: A task is considered “modified” if any of its properties change, or associations between it and other objects are modified (e.g.  a task being added to a project). A task is not considered modified just because another object it is associated with (e.g. a subtask) is modified. Actions that count as modifying the task include assigning, renaming, completing, and adding stories.* (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     # and optional values
@@ -1137,7 +1191,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1183,7 +1237,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1225,7 +1279,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1270,7 +1324,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1311,7 +1365,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1356,7 +1410,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1397,7 +1451,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1443,7 +1497,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1485,7 +1539,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1572,8 +1626,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1661,8 +1715,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1711,7 +1765,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # RemoveFollowerForTaskRequest | The followers to remove from the task.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1750,8 +1804,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1836,8 +1890,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1922,8 +1976,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -2018,7 +2072,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     is_subtask = False # bool | Filter to subtasks (optional)
     sort_by = "likes" # str | One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at` (optional) if omitted the server will use the default value of "modified_at"
     sort_ascending = True # bool | Default `false` (optional) if omitted the server will use the default value of False
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","name","due_on","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -2109,7 +2163,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -2159,7 +2213,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # SetParentForTaskRequest | The new parent of the subtask.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -2198,8 +2252,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -2242,10 +2296,37 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = tasks_api.TasksApi(api_client)
     task_gid = "321654" # str | The task to operate on.
     create_task_request = CreateTaskRequest(
-        data=TaskRequest(None),
+        data=TaskRequest(
+            name="Buy catnip",
+            resource_subtype="default_task",
+            approval_status="pending",
+            assignee_status="upcoming",
+            completed=False,
+            due_at=dateutil_parser('1970-01-01').date(),
+            due_on=dateutil_parser('Sat Sep 14 17:00:00 PDT 2019').date(),
+            external=TaskBaseExternal(
+                gid="1234",
+                data="A blob of information.",
+            ),
+            html_notes="<body>Mittens <em>really</em> likes the stuff from Humboldt.</body>",
+            liked=True,
+            notes="Mittens really likes the stuff from Humboldt.",
+            start_at=dateutil_parser('1970-01-01').date(),
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            assignee="12345",
+            assignee_section="12345",
+            custom_fields={
+                "key": "key_example",
+            },
+            followers=["12345"],
+            parent="12345",
+            projects=["12345"],
+            tags=["12345"],
+            workspace="12345",
+        ),
     ) # CreateTaskRequest | The task to update.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","memberships","parent","assignee_status","actual_time_minutes","custom_fields","html_notes","start_at","assignee_section","due_on","name","permalink_url","external","modified_at","num_hearts","num_likes","resource_subtype","projects","num_subtasks","completed_at","completed_by","dependencies","approval_status","dependents","hearts","likes","liked","workspace","tags","hearted","due_at","completed","is_rendered_as_separator","notes","assignee","followers","start_on"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["actual_time_minutes","tags","due_on","start_at","num_likes","parent","hearts","likes","modified_at","is_rendered_as_separator","dependents","hearted","external","permalink_url","projects","assignee_status","dependencies","html_notes","completed_at","name","completed_by","notes","memberships","workspace","due_at","created_at","assignee_section","num_subtasks","start_on","num_hearts","custom_fields","resource_subtype","approval_status","liked","assignee","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -2284,8 +2365,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

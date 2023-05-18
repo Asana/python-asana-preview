@@ -36,12 +36,18 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = status_updates_api.StatusUpdatesApi(api_client)
     create_status_for_object_request = CreateStatusForObjectRequest(
-        data=StatusUpdateRequest(None),
+        data=StatusUpdateRequest(
+            title="Status Update - Jun 15",
+            text="The project is moving forward according to plan...",
+            html_text="<body>The project <strong>is</strong> moving forward according to plan...</body>",
+            status_type="on_track",
+            parent="parent_example",
+        ),
     ) # CreateStatusForObjectRequest | The status update to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["parent","num_likes","author","created_at","created_by","modified_at","num_hearts","resource_subtype","status_type","text","html_text","hearts","likes","liked","title","hearted"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["hearts","html_text","created_by","status_type","title","num_hearts","resource_subtype","likes","modified_at","text","created_at","liked","hearted","author","num_likes","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -81,8 +87,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -162,7 +168,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -205,7 +211,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = status_updates_api.StatusUpdatesApi(api_client)
     status_gid = "321654" # str | The status update to get.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["parent","num_likes","author","created_at","created_by","modified_at","num_hearts","resource_subtype","status_type","text","html_text","hearts","likes","liked","title","hearted"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["hearts","html_text","created_by","status_type","title","num_hearts","resource_subtype","likes","modified_at","text","created_at","liked","hearted","author","num_likes","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -244,7 +250,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -290,7 +296,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
     created_since = dateutil_parser('2012-02-22T02:06:58.158Z') # datetime | Only return statuses that have been created since the given time. (optional)
-    opt_fields = ["parent","num_likes","created_at","author","created_by","modified_at","resource_subtype","num_hearts","status_type","text","html_text","hearts","likes","liked","title","hearted"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["hearts","html_text","created_by","status_type","title","num_hearts","resource_subtype","likes","modified_at","text","created_at","liked","hearted","author","num_likes","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -332,7 +338,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

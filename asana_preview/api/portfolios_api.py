@@ -83,9 +83,9 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "PROJECT": "project",
                         "IS_IMPORTANT": "is_important",
                         "CUSTOM_FIELD": "custom_field",
-                        "PROJECT": "project",
                         "PARENT": "parent"
                     },
                 },
@@ -116,10 +116,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -179,10 +179,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -223,21 +223,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
-                        "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace",
                         "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_BY": "created_by",
+                        "START_ON": "start_on",
+                        "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -267,10 +267,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -309,21 +309,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
-                        "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace",
                         "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_BY": "created_by",
+                        "START_ON": "start_on",
+                        "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -349,10 +349,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -407,7 +407,7 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -449,35 +449,35 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "COLOR": "color",
-                        "ARCHIVED": "archived",
-                        "ICON": "icon",
-                        "PUBLIC": "public",
-                        "DEFAULT_VIEW": "default_view",
-                        "MEMBERS": "members",
-                        "PROJECT_BRIEF": "project_brief",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "PRIVACY_SETTING": "privacy_setting",
-                        "NAME": "name",
-                        "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "OWNER": "owner",
-                        "MODIFIED_AT": "modified_at",
                         "CURRENT_STATUS": "current_status",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
                         "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "WORKSPACE": "workspace",
+                        "ARCHIVED": "archived",
+                        "TEAM": "team",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "MODIFIED_AT": "modified_at",
+                        "COLOR": "color",
+                        "OWNER": "owner",
+                        "PERMALINK_URL": "permalink_url",
+                        "CREATED_FROM_TEMPLATE": "created_from_template",
+                        "PUBLIC": "public",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "DUE_DATE": "due_date",
-                        "COMPLETED": "completed",
+                        "PRIVACY_SETTING": "privacy_setting",
                         "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
+                        "WORKSPACE": "workspace",
+                        "PROJECT_BRIEF": "project_brief",
+                        "CREATED_AT": "created_at",
+                        "DEFAULT_VIEW": "default_view",
                         "START_ON": "start_on",
-                        "TEAM": "team",
-                        "CREATED_FROM_TEMPLATE": "created_from_template"
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "ICON": "icon",
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -512,7 +512,7 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -552,21 +552,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
-                        "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace",
                         "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_BY": "created_by",
+                        "START_ON": "start_on",
+                        "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -593,7 +593,7 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -636,21 +636,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
+                        "PUBLIC": "public",
+                        "OWNER": "owner",
                         "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
                         "START_ON": "start_on",
                         "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
                         "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
                         "DUE_ON": "due_on",
-                        "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
                         "WORKSPACE": "workspace",
-                        "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -689,7 +689,7 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -750,10 +750,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -813,10 +813,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -857,21 +857,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
-                        "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace",
                         "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_BY": "created_by",
+                        "START_ON": "start_on",
+                        "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -901,10 +901,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -945,21 +945,21 @@ class PortfoliosApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "CREATED_BY": "created_by",
-                        "COLOR": "color",
-                        "PROJECT_TEMPLATES": "project_templates",
-                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
-                        "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace",
                         "OWNER": "owner",
-                        "MEMBERS": "members"
+                        "CREATED_BY": "created_by",
+                        "START_ON": "start_on",
+                        "NAME": "name",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "COLOR": "color",
+                        "CUSTOM_FIELD_SETTINGS": "custom_field_settings",
+                        "PROJECT_TEMPLATES": "project_templates",
+                        "MEMBERS": "members",
+                        "DUE_ON": "due_on",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
+                        "PERMALINK_URL": "permalink_url"
                     },
                 },
                 'openapi_types': {
@@ -989,10 +989,10 @@ class PortfoliosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

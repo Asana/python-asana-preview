@@ -70,9 +70,9 @@ class UserTaskListsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "OWNER": "owner",
                         "NAME": "name",
-                        "WORKSPACE": "workspace"
+                        "WORKSPACE": "workspace",
+                        "OWNER": "owner"
                     },
                 },
                 'openapi_types': {
@@ -99,7 +99,7 @@ class UserTaskListsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -141,9 +141,9 @@ class UserTaskListsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "OWNER": "owner",
                         "NAME": "name",
-                        "WORKSPACE": "workspace"
+                        "WORKSPACE": "workspace",
+                        "OWNER": "owner"
                     },
                 },
                 'openapi_types': {
@@ -174,7 +174,7 @@ class UserTaskListsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

@@ -1,5 +1,6 @@
 # CustomFieldSettingCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. Custom Fields Settings objects represent the many-to-many join of the Custom Field and Project as well as stores information that is relevant to that particular pairing.
 
 ## Properties
 Name | Type | Description | Notes

@@ -87,10 +87,10 @@ class MembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -145,7 +145,7 @@ class MembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -224,7 +224,7 @@ class MembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -284,10 +284,10 @@ class MembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

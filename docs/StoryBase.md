@@ -1,5 +1,6 @@
 # StoryBase
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A story represents an activity associated with an object in the Asana system.
 
 ## Properties
 Name | Type | Description | Notes

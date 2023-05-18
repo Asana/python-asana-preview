@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.batch_request_action_options import BatchRequestActionOptions
-    globals()['BatchRequestActionOptions'] = BatchRequestActionOptions
+    from asana_preview.model.batch_request_actions_inner_options import BatchRequestActionsInnerOptions
+    globals()['BatchRequestActionsInnerOptions'] = BatchRequestActionsInnerOptions
 
 
 class BatchRequestAction(ModelNormal):
@@ -98,7 +98,7 @@ class BatchRequestAction(ModelNormal):
             'relative_path': (str,),  # noqa: E501
             'method': (str,),  # noqa: E501
             'data': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'options': (BatchRequestActionOptions,),  # noqa: E501
+            'options': (BatchRequestActionsInnerOptions,),  # noqa: E501
         }
 
     @cached_property
@@ -159,7 +159,7 @@ class BatchRequestAction(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): For `GET` requests, this should be a map of query parameters you would have normally passed in the URL. Options and pagination are not accepted here; put them in `options` instead. For `POST`, `PATCH`, and `PUT` methods, this should be the content you would have normally put in the data field of the body.. [optional]  # noqa: E501
-            options (BatchRequestActionOptions): [optional]  # noqa: E501
+            options (BatchRequestActionsInnerOptions): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,7 +252,7 @@ class BatchRequestAction(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): For `GET` requests, this should be a map of query parameters you would have normally passed in the URL. Options and pagination are not accepted here; put them in `options` instead. For `POST`, `PATCH`, and `PUT` methods, this should be the content you would have normally put in the data field of the body.. [optional]  # noqa: E501
-            options (BatchRequestActionOptions): [optional]  # noqa: E501
+            options (BatchRequestActionsInnerOptions): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

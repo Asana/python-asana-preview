@@ -38,10 +38,15 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = stories_api.StoriesApi(api_client)
     task_gid = "321654" # str | The task to operate on.
     update_story_request = UpdateStoryRequest(
-        data=StoryBase(None),
+        data=StoryRequest(
+            text="This is a comment.",
+            html_text="<body>This is a comment.</body>",
+            is_pinned=False,
+            sticker_name="dancing_unicorn",
+        ),
     ) # UpdateStoryRequest | The story to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","new_enum_value","created_by","new_number_value","is_edited","previews","old_multi_enum_values","new_name","new_people_value","project","follower","new_resource_subtype","tag","old_resource_subtype","task","is_editable","sticker_name","story","new_section","num_likes","num_hearts","old_name","resource_subtype","html_text","duplicate_of","hearts","source","target","likes","liked","old_date_value","old_enum_value","hearted","old_section","new_date_value","type","new_approval_status","text","old_people_value","assignee","new_dates","new_text_value","duplicated_from","custom_field","dependency","old_text_value","is_pinned","old_dates","old_approval_status","old_number_value","new_multi_enum_values"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_dates","created_by","old_name","old_date_value","is_editable","new_date_value","old_enum_value","old_resource_subtype","tag","is_pinned","new_text_value","follower","num_likes","story","dependency","text","hearts","likes","old_dates","new_people_value","old_section","hearted","old_approval_status","old_people_value","task","target","new_enum_value","new_number_value","html_text","old_number_value","new_multi_enum_values","new_section","old_text_value","created_at","is_edited","sticker_name","new_name","duplicated_from","new_approval_status","project","num_hearts","resource_subtype","type","previews","duplicate_of","old_multi_enum_values","liked","assignee","source","new_resource_subtype","custom_field"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -80,8 +85,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -161,7 +166,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -206,7 +211,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","new_enum_value","created_by","new_number_value","is_edited","previews","old_multi_enum_values","new_name","new_people_value","project","follower","new_resource_subtype","tag","old_resource_subtype","task","is_editable","sticker_name","story","new_section","num_likes","num_hearts","old_name","resource_subtype","html_text","duplicate_of","hearts","source","target","likes","liked","old_date_value","old_enum_value","hearted","old_section","new_date_value","type","new_approval_status","text","old_people_value","assignee","new_dates","new_text_value","duplicated_from","custom_field","dependency","old_text_value","is_pinned","old_dates","old_approval_status","old_number_value","new_multi_enum_values"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_dates","created_by","old_name","old_date_value","is_editable","new_date_value","old_enum_value","old_resource_subtype","tag","is_pinned","new_text_value","follower","num_likes","story","dependency","text","hearts","likes","old_dates","new_people_value","old_section","hearted","old_approval_status","old_people_value","task","target","new_enum_value","new_number_value","html_text","old_number_value","new_multi_enum_values","new_section","old_text_value","created_at","is_edited","sticker_name","new_name","duplicated_from","new_approval_status","project","num_hearts","resource_subtype","type","previews","duplicate_of","old_multi_enum_values","liked","assignee","source","new_resource_subtype","custom_field"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -247,7 +252,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -292,7 +297,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","new_enum_value","created_by","new_number_value","is_edited","previews","old_multi_enum_values","new_name","new_people_value","project","follower","new_resource_subtype","tag","old_resource_subtype","task","is_editable","sticker_name","story","new_section","num_likes","num_hearts","old_name","resource_subtype","html_text","duplicate_of","hearts","source","target","likes","liked","old_date_value","old_enum_value","hearted","old_section","new_date_value","type","new_approval_status","text","old_people_value","assignee","new_dates","new_text_value","duplicated_from","custom_field","dependency","old_text_value","is_pinned","old_dates","old_approval_status","old_number_value","new_multi_enum_values"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_dates","created_by","old_name","old_date_value","is_editable","new_date_value","old_enum_value","old_resource_subtype","tag","is_pinned","new_text_value","follower","num_likes","story","dependency","text","hearts","likes","old_dates","new_people_value","old_section","hearted","old_approval_status","old_people_value","task","target","new_enum_value","new_number_value","html_text","old_number_value","new_multi_enum_values","new_section","old_text_value","created_at","is_edited","sticker_name","new_name","duplicated_from","new_approval_status","project","num_hearts","resource_subtype","type","previews","duplicate_of","old_multi_enum_values","liked","assignee","source","new_resource_subtype","custom_field"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -333,7 +338,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -376,10 +381,15 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = stories_api.StoriesApi(api_client)
     story_gid = "35678" # str | Globally unique identifier for the story.
     update_story_request = UpdateStoryRequest(
-        data=StoryBase(None),
+        data=StoryRequest(
+            text="This is a comment.",
+            html_text="<body>This is a comment.</body>",
+            is_pinned=False,
+            sticker_name="dancing_unicorn",
+        ),
     ) # UpdateStoryRequest | The comment story to update.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","new_enum_value","created_by","new_number_value","is_edited","previews","old_multi_enum_values","new_name","new_people_value","project","follower","new_resource_subtype","tag","old_resource_subtype","task","is_editable","sticker_name","story","new_section","num_likes","num_hearts","old_name","resource_subtype","html_text","duplicate_of","hearts","source","target","likes","liked","old_date_value","old_enum_value","hearted","old_section","new_date_value","type","new_approval_status","text","old_people_value","assignee","new_dates","new_text_value","duplicated_from","custom_field","dependency","old_text_value","is_pinned","old_dates","old_approval_status","old_number_value","new_multi_enum_values"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_dates","created_by","old_name","old_date_value","is_editable","new_date_value","old_enum_value","old_resource_subtype","tag","is_pinned","new_text_value","follower","num_likes","story","dependency","text","hearts","likes","old_dates","new_people_value","old_section","hearted","old_approval_status","old_people_value","task","target","new_enum_value","new_number_value","html_text","old_number_value","new_multi_enum_values","new_section","old_text_value","created_at","is_edited","sticker_name","new_name","duplicated_from","new_approval_status","project","num_hearts","resource_subtype","type","previews","duplicate_of","old_multi_enum_values","liked","assignee","source","new_resource_subtype","custom_field"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -418,8 +428,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

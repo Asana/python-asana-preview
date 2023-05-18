@@ -1,5 +1,6 @@
 # TemplateRole
 
+A generic Asana Resource, containing a globally unique identifier.
 
 ## Properties
 Name | Type | Description | Notes

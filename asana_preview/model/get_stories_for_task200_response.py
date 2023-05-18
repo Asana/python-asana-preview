@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.story_compact import StoryCompact
-    globals()['StoryCompact'] = StoryCompact
+    from asana_preview.model.story_response import StoryResponse
+    globals()['StoryResponse'] = StoryResponse
 
 
 class GetStoriesForTask200Response(ModelNormal):
@@ -87,7 +87,7 @@ class GetStoriesForTask200Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([StoryCompact],),  # noqa: E501
+            'data': ([StoryResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class GetStoriesForTask200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([StoryCompact]): [optional]  # noqa: E501
+            data ([StoryResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class GetStoriesForTask200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([StoryCompact]): [optional]  # noqa: E501
+            data ([StoryResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

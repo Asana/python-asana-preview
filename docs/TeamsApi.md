@@ -45,7 +45,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddUserForTeamRequest | The user to add to the team.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["is_admin","is_guest","team","is_limited_access","user"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["user","is_admin","is_limited_access","is_guest","team"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -127,12 +127,24 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
     update_team_request = UpdateTeamRequest(
-        data=TeamRequest(None),
+        data=TeamRequest(
+            name="Marketing",
+            description="All developers should be members of this team.",
+            html_description="<body><em>All</em> developers should be members of this team.</body>",
+            organization="123456789",
+            visibility="secret",
+            edit_team_name_or_description_access_level="all_team_members",
+            edit_team_visibility_or_trash_team_access_level="all_team_members",
+            member_invite_management_access_level="all_team_members",
+            guest_invite_management_access_level="all_team_members",
+            join_request_management_access_level="all_team_members",
+            team_member_removal_access_level="all_team_members",
+        ),
     ) # UpdateTeamRequest | The team to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","guest_invite_management_access_level","organization","name","join_request_management_access_level","team_member_removal_access_level","visibility","permalink_url","edit_team_visibility_or_trash_team_access_level","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["edit_team_visibility_or_trash_team_access_level","guest_invite_management_access_level","team_member_removal_access_level","name","html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","permalink_url","organization","join_request_management_access_level","visibility","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -172,8 +184,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -218,7 +230,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","guest_invite_management_access_level","organization","name","join_request_management_access_level","team_member_removal_access_level","visibility","permalink_url","edit_team_visibility_or_trash_team_access_level","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["edit_team_visibility_or_trash_team_access_level","guest_invite_management_access_level","team_member_removal_access_level","name","html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","permalink_url","organization","join_request_management_access_level","visibility","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -259,7 +271,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -305,7 +317,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","guest_invite_management_access_level","organization","name","join_request_management_access_level","team_member_removal_access_level","visibility","permalink_url","edit_team_visibility_or_trash_team_access_level","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["edit_team_visibility_or_trash_team_access_level","guest_invite_management_access_level","team_member_removal_access_level","name","html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","permalink_url","organization","join_request_management_access_level","visibility","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -347,7 +359,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -392,7 +404,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","guest_invite_management_access_level","organization","name","join_request_management_access_level","team_member_removal_access_level","visibility","permalink_url","edit_team_visibility_or_trash_team_access_level","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["edit_team_visibility_or_trash_team_access_level","guest_invite_management_access_level","team_member_removal_access_level","name","html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","permalink_url","organization","join_request_management_access_level","visibility","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -433,7 +445,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -518,8 +530,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -561,12 +573,24 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
     update_team_request = UpdateTeamRequest(
-        data=TeamRequest(None),
+        data=TeamRequest(
+            name="Marketing",
+            description="All developers should be members of this team.",
+            html_description="<body><em>All</em> developers should be members of this team.</body>",
+            organization="123456789",
+            visibility="secret",
+            edit_team_name_or_description_access_level="all_team_members",
+            edit_team_visibility_or_trash_team_access_level="all_team_members",
+            member_invite_management_access_level="all_team_members",
+            guest_invite_management_access_level="all_team_members",
+            join_request_management_access_level="all_team_members",
+            team_member_removal_access_level="all_team_members",
+        ),
     ) # UpdateTeamRequest | The team to update.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","guest_invite_management_access_level","organization","name","join_request_management_access_level","team_member_removal_access_level","visibility","permalink_url","edit_team_visibility_or_trash_team_access_level","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["edit_team_visibility_or_trash_team_access_level","guest_invite_management_access_level","team_member_removal_access_level","name","html_description","edit_team_name_or_description_access_level","member_invite_management_access_level","permalink_url","organization","join_request_management_access_level","visibility","description"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -606,8 +630,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

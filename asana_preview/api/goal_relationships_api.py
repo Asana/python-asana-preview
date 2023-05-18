@@ -78,9 +78,9 @@ class GoalRelationshipsApi(object):
                     ('opt_fields',): {
 
                         "SUPPORTING_RESOURCE": "supporting_resource",
-                        "SUPPORTED_GOAL": "supported_goal",
                         "CONTRIBUTION_WEIGHT": "contribution_weight",
-                        "RESOURCE_SUBTYPE": "resource_subtype"
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "SUPPORTED_GOAL": "supported_goal"
                     },
                 },
                 'openapi_types': {
@@ -110,10 +110,10 @@ class GoalRelationshipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -153,9 +153,9 @@ class GoalRelationshipsApi(object):
                     ('opt_fields',): {
 
                         "SUPPORTING_RESOURCE": "supporting_resource",
-                        "SUPPORTED_GOAL": "supported_goal",
                         "CONTRIBUTION_WEIGHT": "contribution_weight",
-                        "RESOURCE_SUBTYPE": "resource_subtype"
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "SUPPORTED_GOAL": "supported_goal"
                     },
                 },
                 'openapi_types': {
@@ -182,7 +182,7 @@ class GoalRelationshipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -224,9 +224,9 @@ class GoalRelationshipsApi(object):
                     ('opt_fields',): {
 
                         "SUPPORTING_RESOURCE": "supporting_resource",
-                        "SUPPORTED_GOAL": "supported_goal",
                         "CONTRIBUTION_WEIGHT": "contribution_weight",
-                        "RESOURCE_SUBTYPE": "resource_subtype"
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "SUPPORTED_GOAL": "supported_goal"
                     },
                 },
                 'openapi_types': {
@@ -257,7 +257,7 @@ class GoalRelationshipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -318,10 +318,10 @@ class GoalRelationshipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -363,9 +363,9 @@ class GoalRelationshipsApi(object):
                     ('opt_fields',): {
 
                         "SUPPORTING_RESOURCE": "supporting_resource",
-                        "SUPPORTED_GOAL": "supported_goal",
                         "CONTRIBUTION_WEIGHT": "contribution_weight",
-                        "RESOURCE_SUBTYPE": "resource_subtype"
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "SUPPORTED_GOAL": "supported_goal"
                     },
                 },
                 'openapi_types': {
@@ -395,10 +395,10 @@ class GoalRelationshipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

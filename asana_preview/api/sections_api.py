@@ -96,10 +96,10 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -141,9 +141,9 @@ class SectionsApi(object):
                     ('opt_fields',): {
 
                         "PROJECTS": "projects",
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "PROJECT": "project",
-                        "NAME": "name"
+                        "CREATED_AT": "created_at"
                     },
                 },
                 'openapi_types': {
@@ -173,10 +173,10 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -231,7 +231,7 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -272,9 +272,9 @@ class SectionsApi(object):
                     ('opt_fields',): {
 
                         "PROJECTS": "projects",
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "PROJECT": "project",
-                        "NAME": "name"
+                        "CREATED_AT": "created_at"
                     },
                 },
                 'openapi_types': {
@@ -301,7 +301,7 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -344,8 +344,8 @@ class SectionsApi(object):
                     ('opt_fields',): {
 
                         "PROJECTS": "projects",
-                        "PROJECT": "project",
                         "NAME": "name",
+                        "PROJECT": "project",
                         "CREATED_AT": "created_at"
                     },
                 },
@@ -381,7 +381,7 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -442,10 +442,10 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -487,9 +487,9 @@ class SectionsApi(object):
                     ('opt_fields',): {
 
                         "PROJECTS": "projects",
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "PROJECT": "project",
-                        "NAME": "name"
+                        "CREATED_AT": "created_at"
                     },
                 },
                 'openapi_types': {
@@ -519,10 +519,10 @@ class SectionsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

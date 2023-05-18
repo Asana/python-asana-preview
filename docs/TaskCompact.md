@@ -1,5 +1,6 @@
 # TaskCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. The *task* is the basic object around which many operations in Asana are centered.
 
 ## Properties
 Name | Type | Description | Notes

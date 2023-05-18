@@ -1,5 +1,6 @@
 # WebhookRequestFiltersInner
 
+A WebhookFilter can be passed on creation of a webhook in order to filter the types of actions that trigger delivery of an [event](/reference/events)A WebhookFilter can be passed on creation of a webhook in order to filter the types of actions that trigger delivery of an [event](/reference/events) A set of filters to specify a whitelist for what types of events will be delivered.
 
 ## Properties
 Name | Type | Description | Notes

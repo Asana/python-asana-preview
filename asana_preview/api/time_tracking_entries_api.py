@@ -76,11 +76,11 @@ class TimeTrackingEntriesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
                         "CREATED_BY": "created_by",
-                        "TASK": "task",
+                        "DURATION_MINUTES": "duration_minutes",
                         "ENTERED_ON": "entered_on",
-                        "DURATION_MINUTES": "duration_minutes"
+                        "CREATED_AT": "created_at",
+                        "TASK": "task"
                     },
                 },
                 'openapi_types': {
@@ -110,10 +110,10 @@ class TimeTrackingEntriesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -168,7 +168,7 @@ class TimeTrackingEntriesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -210,9 +210,9 @@ class TimeTrackingEntriesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "ENTERED_ON": "entered_on",
+                        "CREATED_BY": "created_by",
                         "DURATION_MINUTES": "duration_minutes",
-                        "CREATED_BY": "created_by"
+                        "ENTERED_ON": "entered_on"
                     },
                 },
                 'openapi_types': {
@@ -247,7 +247,7 @@ class TimeTrackingEntriesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -287,11 +287,11 @@ class TimeTrackingEntriesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
                         "CREATED_BY": "created_by",
-                        "TASK": "task",
+                        "DURATION_MINUTES": "duration_minutes",
                         "ENTERED_ON": "entered_on",
-                        "DURATION_MINUTES": "duration_minutes"
+                        "CREATED_AT": "created_at",
+                        "TASK": "task"
                     },
                 },
                 'openapi_types': {
@@ -318,7 +318,7 @@ class TimeTrackingEntriesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -360,11 +360,11 @@ class TimeTrackingEntriesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
                         "CREATED_BY": "created_by",
-                        "TASK": "task",
+                        "DURATION_MINUTES": "duration_minutes",
                         "ENTERED_ON": "entered_on",
-                        "DURATION_MINUTES": "duration_minutes"
+                        "CREATED_AT": "created_at",
+                        "TASK": "task"
                     },
                 },
                 'openapi_types': {
@@ -394,10 +394,10 @@ class TimeTrackingEntriesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

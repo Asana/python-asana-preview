@@ -1,5 +1,6 @@
 # ProjectStatusResponse
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. *Deprecated: new integrations should prefer the `status_update` resource.* A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \"green\" for projects that are on track, \"yellow\" for projects at risk, and \"red\" for projects that are behind.
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,9 +11,9 @@ Name | Type | Description | Notes
 **resource_type** | **str** | The base type of this resource. | [optional] [readonly] 
 **title** | **str** | The title of the project status update. | [optional] 
 **html_text** | **str** | [Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. | [optional] 
-**author** | [**UserCompact**](UserCompact.md) |  | [optional] 
+**author** | [**CustomFieldResponsePeopleValueInner**](CustomFieldResponsePeopleValueInner.md) |  | [optional] 
 **created_at** | **datetime** | The time at which this resource was created. | [optional] [readonly] 
-**created_by** | [**UserCompact**](UserCompact.md) |  | [optional] 
+**created_by** | [**CustomFieldResponsePeopleValueInner**](CustomFieldResponsePeopleValueInner.md) |  | [optional] 
 **modified_at** | **datetime** | The time at which this project status was last modified. *Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the project status.* | [optional] [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

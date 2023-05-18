@@ -74,14 +74,14 @@ class WebhooksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "LAST_FAILURE_CONTENT": "last_failure_content",
-                        "CREATED_AT": "created_at",
+                        "ACTIVE": "active",
                         "RESOURCE": "resource",
                         "LAST_FAILURE_AT": "last_failure_at",
-                        "ACTIVE": "active",
-                        "TARGET": "target",
                         "FILTERS": "filters",
-                        "LAST_SUCCESS_AT": "last_success_at"
+                        "LAST_FAILURE_CONTENT": "last_failure_content",
+                        "LAST_SUCCESS_AT": "last_success_at",
+                        "CREATED_AT": "created_at",
+                        "TARGET": "target"
                     },
                 },
                 'openapi_types': {
@@ -107,10 +107,10 @@ class WebhooksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -165,7 +165,7 @@ class WebhooksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -205,14 +205,14 @@ class WebhooksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "LAST_FAILURE_CONTENT": "last_failure_content",
-                        "CREATED_AT": "created_at",
+                        "ACTIVE": "active",
                         "RESOURCE": "resource",
                         "LAST_FAILURE_AT": "last_failure_at",
-                        "ACTIVE": "active",
-                        "TARGET": "target",
                         "FILTERS": "filters",
-                        "LAST_SUCCESS_AT": "last_success_at"
+                        "LAST_FAILURE_CONTENT": "last_failure_content",
+                        "LAST_SUCCESS_AT": "last_success_at",
+                        "CREATED_AT": "created_at",
+                        "TARGET": "target"
                     },
                 },
                 'openapi_types': {
@@ -239,7 +239,7 @@ class WebhooksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -282,14 +282,14 @@ class WebhooksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "LAST_FAILURE_CONTENT": "last_failure_content",
-                        "CREATED_AT": "created_at",
+                        "ACTIVE": "active",
                         "RESOURCE": "resource",
                         "LAST_FAILURE_AT": "last_failure_at",
-                        "ACTIVE": "active",
-                        "TARGET": "target",
                         "FILTERS": "filters",
-                        "LAST_SUCCESS_AT": "last_success_at"
+                        "LAST_FAILURE_CONTENT": "last_failure_content",
+                        "LAST_SUCCESS_AT": "last_success_at",
+                        "CREATED_AT": "created_at",
+                        "TARGET": "target"
                     },
                 },
                 'openapi_types': {
@@ -328,7 +328,7 @@ class WebhooksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -370,14 +370,14 @@ class WebhooksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "LAST_FAILURE_CONTENT": "last_failure_content",
-                        "CREATED_AT": "created_at",
+                        "ACTIVE": "active",
                         "RESOURCE": "resource",
                         "LAST_FAILURE_AT": "last_failure_at",
-                        "ACTIVE": "active",
-                        "TARGET": "target",
                         "FILTERS": "filters",
-                        "LAST_SUCCESS_AT": "last_success_at"
+                        "LAST_FAILURE_CONTENT": "last_failure_content",
+                        "LAST_SUCCESS_AT": "last_success_at",
+                        "CREATED_AT": "created_at",
+                        "TARGET": "target"
                     },
                 },
                 'openapi_types': {
@@ -407,10 +407,10 @@ class WebhooksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

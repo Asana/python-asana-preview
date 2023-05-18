@@ -36,19 +36,20 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = attachments_api.AttachmentsApi(api_client)
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["size","parent","connected_to_app","created_at","resource_subtype","view_url","host","name","permanent_url","download_url"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["connected_to_app","name","resource_subtype","host","size","permanent_url","created_at","download_url","view_url","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     resource_subtype = "external" # str | The type of the attachment. Must be one of the given values. If not specified, a file attachment of type `asana` will be assumed. Note that if the value of `resource_subtype` is `external`, a `parent`, `name`, and `url` must also be provided.  (optional)
     file = open('/path/to/file', 'rb') # file_type | Required for `asana` attachments.  (optional)
     parent = "parent_example" # str | Required identifier of the parent task, project, or project_brief, as a string.  (optional)
     url = "url_example" # str | The URL of the external resource being attached. Required for attachments of type `external`.  (optional)
     name = "name_example" # str | The name of the external resource being attached. Required for attachments of type `external`.  (optional)
     connect_to_app = True # bool | *Optional*. Only relevant for external attachments with a parent task. A boolean indicating whether the current app should be connected with the attachment for the purposes of showing an app components widget. Requires the app to have been added to a project the parent task is in.  (optional)
+    app = "app_example" # str | The ID of the App to associate this external attachement with. Internal-only.  (optional)
 
     # Example passing only required values which don't have defaults set
     # and optional values
     try:
         # Upload an attachment
-        api_response = api_instance.create_attachment_for_object(opt_pretty=opt_pretty, opt_fields=opt_fields, resource_subtype=resource_subtype, file=file, parent=parent, url=url, name=name, connect_to_app=connect_to_app)
+        api_response = api_instance.create_attachment_for_object(opt_pretty=opt_pretty, opt_fields=opt_fields, resource_subtype=resource_subtype, file=file, parent=parent, url=url, name=name, connect_to_app=connect_to_app, app=app)
         pprint(api_response)
     except asana_preview.ApiException as e:
         print("Exception when calling AttachmentsApi->create_attachment_for_object: %s\n" % e)
@@ -66,6 +67,7 @@ Name | Type | Description  | Notes
  **url** | **str**| The URL of the external resource being attached. Required for attachments of type &#x60;external&#x60;.  | [optional]
  **name** | **str**| The name of the external resource being attached. Required for attachments of type &#x60;external&#x60;.  | [optional]
  **connect_to_app** | **bool**| *Optional*. Only relevant for external attachments with a parent task. A boolean indicating whether the current app should be connected with the attachment for the purposes of showing an app components widget. Requires the app to have been added to a project the parent task is in.  | [optional]
+ **app** | **str**| The ID of the App to associate this external attachement with. Internal-only.  | [optional]
 
 ### Return type
 
@@ -78,7 +80,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -158,7 +160,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -201,7 +203,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = attachments_api.AttachmentsApi(api_client)
     attachment_gid = "12345" # str | Globally unique identifier for the attachment.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["size","parent","connected_to_app","created_at","resource_subtype","view_url","host","name","permanent_url","download_url"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["connected_to_app","name","resource_subtype","host","size","permanent_url","created_at","download_url","view_url","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -240,7 +242,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -290,7 +292,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["size","parent","created_at","connected_to_app","resource_subtype","view_url","host","name","permanent_url","download_url"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["connected_to_app","name","resource_subtype","host","size","permanent_url","created_at","download_url","view_url","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -331,7 +333,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

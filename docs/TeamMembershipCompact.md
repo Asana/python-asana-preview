@@ -1,13 +1,14 @@
 # TeamMembershipCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. This object represents a user's connection to a team.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gid** | **str** | Globally unique identifier of the resource, as a string. | [optional] [readonly] 
 **resource_type** | **str** | The base type of this resource. | [optional] [readonly] 
-**user** | [**UserCompact**](UserCompact.md) |  | [optional] 
-**team** | [**TeamCompact**](TeamCompact.md) |  | [optional] 
+**user** | [**CustomFieldResponsePeopleValueInner**](CustomFieldResponsePeopleValueInner.md) |  | [optional] 
+**team** | [**GoalResponseTeamAllOf**](GoalResponseTeamAllOf.md) |  | [optional] 
 **is_guest** | **bool** | Describes if the user is a guest in the team. | [optional] 
 **is_limited_access** | **bool** | Describes if the user has limited access to the team. | [optional] 
 **is_admin** | **bool** | Describes if the user is a team admin. | [optional] 

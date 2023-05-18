@@ -59,6 +59,7 @@ class AttachmentsApi(object):
                     'url',
                     'name',
                     'connect_to_app',
+                    'app',
                 ],
                 'required': [],
                 'nullable': [
@@ -76,16 +77,16 @@ class AttachmentsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "SIZE": "size",
-                        "PARENT": "parent",
                         "CONNECTED_TO_APP": "connected_to_app",
-                        "CREATED_AT": "created_at",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "VIEW_URL": "view_url",
-                        "HOST": "host",
                         "NAME": "name",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "HOST": "host",
+                        "SIZE": "size",
                         "PERMANENT_URL": "permanent_url",
-                        "DOWNLOAD_URL": "download_url"
+                        "CREATED_AT": "created_at",
+                        "DOWNLOAD_URL": "download_url",
+                        "VIEW_URL": "view_url",
+                        "PARENT": "parent"
                     },
                     ('resource_subtype',): {
 
@@ -115,6 +116,8 @@ class AttachmentsApi(object):
                         (str,),
                     'connect_to_app':
                         (bool,),
+                    'app':
+                        (str,),
                 },
                 'attribute_map': {
                     'opt_pretty': 'opt_pretty',
@@ -125,6 +128,7 @@ class AttachmentsApi(object):
                     'url': 'url',
                     'name': 'name',
                     'connect_to_app': 'connect_to_app',
+                    'app': 'app',
                 },
                 'location_map': {
                     'opt_pretty': 'query',
@@ -135,6 +139,7 @@ class AttachmentsApi(object):
                     'url': 'form',
                     'name': 'form',
                     'connect_to_app': 'form',
+                    'app': 'form',
                 },
                 'collection_format_map': {
                     'opt_fields': 'csv',
@@ -142,7 +147,7 @@ class AttachmentsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
                     'multipart/form-data'
@@ -200,7 +205,7 @@ class AttachmentsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -240,16 +245,16 @@ class AttachmentsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "SIZE": "size",
-                        "PARENT": "parent",
                         "CONNECTED_TO_APP": "connected_to_app",
-                        "CREATED_AT": "created_at",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "VIEW_URL": "view_url",
-                        "HOST": "host",
                         "NAME": "name",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "HOST": "host",
+                        "SIZE": "size",
                         "PERMANENT_URL": "permanent_url",
-                        "DOWNLOAD_URL": "download_url"
+                        "CREATED_AT": "created_at",
+                        "DOWNLOAD_URL": "download_url",
+                        "VIEW_URL": "view_url",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -276,7 +281,7 @@ class AttachmentsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -318,16 +323,16 @@ class AttachmentsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "SIZE": "size",
-                        "PARENT": "parent",
-                        "CREATED_AT": "created_at",
                         "CONNECTED_TO_APP": "connected_to_app",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "VIEW_URL": "view_url",
-                        "HOST": "host",
                         "NAME": "name",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "HOST": "host",
+                        "SIZE": "size",
                         "PERMANENT_URL": "permanent_url",
-                        "DOWNLOAD_URL": "download_url"
+                        "CREATED_AT": "created_at",
+                        "DOWNLOAD_URL": "download_url",
+                        "VIEW_URL": "view_url",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -362,7 +367,7 @@ class AttachmentsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -392,6 +397,7 @@ class AttachmentsApi(object):
             url (str): The URL of the external resource being attached. Required for attachments of type `external`. . [optional]
             name (str): The name of the external resource being attached. Required for attachments of type `external`. . [optional]
             connect_to_app (bool): *Optional*. Only relevant for external attachments with a parent task. A boolean indicating whether the current app should be connected with the attachment for the purposes of showing an app components widget. Requires the app to have been added to a project the parent task is in. . [optional]
+            app (str): The ID of the App to associate this external attachement with. Internal-only. . [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

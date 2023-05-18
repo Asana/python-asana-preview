@@ -75,14 +75,14 @@ class ProjectStatusesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "AUTHOR": "author",
-                        "CREATED_AT": "created_at",
+                        "HTML_TEXT": "html_text",
                         "CREATED_BY": "created_by",
+                        "TITLE": "title",
                         "MODIFIED_AT": "modified_at",
                         "COLOR": "color",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
-                        "TITLE": "title"
+                        "CREATED_AT": "created_at",
+                        "AUTHOR": "author",
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -112,10 +112,10 @@ class ProjectStatusesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -170,7 +170,7 @@ class ProjectStatusesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -210,14 +210,14 @@ class ProjectStatusesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "AUTHOR": "author",
-                        "CREATED_AT": "created_at",
+                        "HTML_TEXT": "html_text",
                         "CREATED_BY": "created_by",
+                        "TITLE": "title",
                         "MODIFIED_AT": "modified_at",
                         "COLOR": "color",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
-                        "TITLE": "title"
+                        "CREATED_AT": "created_at",
+                        "AUTHOR": "author",
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -244,7 +244,7 @@ class ProjectStatusesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -286,14 +286,14 @@ class ProjectStatusesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "AUTHOR": "author",
-                        "CREATED_AT": "created_at",
+                        "HTML_TEXT": "html_text",
                         "CREATED_BY": "created_by",
+                        "TITLE": "title",
                         "MODIFIED_AT": "modified_at",
                         "COLOR": "color",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
-                        "TITLE": "title"
+                        "CREATED_AT": "created_at",
+                        "AUTHOR": "author",
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -328,7 +328,7 @@ class ProjectStatusesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

@@ -1,5 +1,6 @@
 # EventResponseResource
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. The resource which has triggered the event by being modified in some way.
 
 ## Properties
 Name | Type | Description | Notes

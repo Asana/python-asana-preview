@@ -104,10 +104,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -167,10 +167,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -230,10 +230,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -293,10 +293,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -337,43 +337,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -403,10 +403,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -445,43 +445,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -507,10 +507,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -565,7 +565,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -607,12 +607,12 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "NEW_PROJECT": "new_project",
                         "STATUS": "status",
                         "RESOURCE_SUBTYPE": "resource_subtype",
-                        "NEW_PROJECT_TEMPLATE": "new_project_template",
-                        "NEW_TASK": "new_task",
                         "NEW_TASK_TEMPLATE": "new_task_template",
-                        "NEW_PROJECT": "new_project"
+                        "NEW_PROJECT_TEMPLATE": "new_project_template",
+                        "NEW_TASK": "new_task"
                     },
                 },
                 'openapi_types': {
@@ -642,10 +642,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -686,43 +686,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -757,7 +757,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -799,43 +799,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -870,7 +870,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -912,43 +912,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -983,7 +983,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1023,43 +1023,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1086,7 +1086,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1131,43 +1131,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1222,7 +1222,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1265,43 +1265,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1340,7 +1340,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1382,43 +1382,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1453,7 +1453,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1495,43 +1495,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1566,7 +1566,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1609,43 +1609,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1684,7 +1684,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -1745,10 +1745,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -1808,10 +1808,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -1852,43 +1852,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -1918,10 +1918,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -1981,10 +1981,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -2044,10 +2044,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -2158,43 +2158,43 @@ class TasksApi(object):
                     },
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
-                        "NAME": "name",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -2429,7 +2429,7 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -2471,43 +2471,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -2537,10 +2537,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -2581,43 +2581,43 @@ class TasksApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "MEMBERSHIPS": "memberships",
-                        "PARENT": "parent",
-                        "ASSIGNEE_STATUS": "assignee_status",
                         "ACTUAL_TIME_MINUTES": "actual_time_minutes",
-                        "CUSTOM_FIELDS": "custom_fields",
-                        "HTML_NOTES": "html_notes",
-                        "START_AT": "start_at",
-                        "ASSIGNEE_SECTION": "assignee_section",
+                        "TAGS": "tags",
                         "DUE_ON": "due_on",
-                        "NAME": "name",
-                        "PERMALINK_URL": "permalink_url",
-                        "EXTERNAL": "external",
-                        "MODIFIED_AT": "modified_at",
-                        "NUM_HEARTS": "num_hearts",
+                        "START_AT": "start_at",
                         "NUM_LIKES": "num_likes",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "PROJECTS": "projects",
-                        "NUM_SUBTASKS": "num_subtasks",
-                        "COMPLETED_AT": "completed_at",
-                        "COMPLETED_BY": "completed_by",
-                        "DEPENDENCIES": "dependencies",
-                        "APPROVAL_STATUS": "approval_status",
-                        "DEPENDENTS": "dependents",
+                        "PARENT": "parent",
                         "HEARTS": "hearts",
                         "LIKES": "likes",
-                        "LIKED": "liked",
-                        "WORKSPACE": "workspace",
-                        "TAGS": "tags",
-                        "HEARTED": "hearted",
-                        "DUE_AT": "due_at",
-                        "COMPLETED": "completed",
+                        "MODIFIED_AT": "modified_at",
                         "IS_RENDERED_AS_SEPARATOR": "is_rendered_as_separator",
+                        "DEPENDENTS": "dependents",
+                        "HEARTED": "hearted",
+                        "EXTERNAL": "external",
+                        "PERMALINK_URL": "permalink_url",
+                        "PROJECTS": "projects",
+                        "ASSIGNEE_STATUS": "assignee_status",
+                        "DEPENDENCIES": "dependencies",
+                        "HTML_NOTES": "html_notes",
+                        "COMPLETED_AT": "completed_at",
+                        "NAME": "name",
+                        "COMPLETED_BY": "completed_by",
                         "NOTES": "notes",
+                        "MEMBERSHIPS": "memberships",
+                        "WORKSPACE": "workspace",
+                        "DUE_AT": "due_at",
+                        "CREATED_AT": "created_at",
+                        "ASSIGNEE_SECTION": "assignee_section",
+                        "NUM_SUBTASKS": "num_subtasks",
+                        "START_ON": "start_on",
+                        "NUM_HEARTS": "num_hearts",
+                        "CUSTOM_FIELDS": "custom_fields",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "APPROVAL_STATUS": "approval_status",
+                        "LIKED": "liked",
                         "ASSIGNEE": "assignee",
-                        "FOLLOWERS": "followers",
-                        "START_ON": "start_on"
+                        "COMPLETED": "completed",
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -2647,10 +2647,10 @@ class TasksApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

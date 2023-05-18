@@ -73,14 +73,14 @@ class ProjectTemplatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "REQUESTED_DATES": "requested_dates",
-                        "HTML_DESCRIPTION": "html_description",
-                        "COLOR": "color",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "TEAM": "team",
                         "REQUESTED_ROLES": "requested_roles",
+                        "NAME": "name",
+                        "REQUESTED_DATES": "requested_dates",
+                        "COLOR": "color",
+                        "HTML_DESCRIPTION": "html_description",
                         "OWNER": "owner",
+                        "TEAM": "team",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -108,7 +108,7 @@ class ProjectTemplatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -149,14 +149,14 @@ class ProjectTemplatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "REQUESTED_DATES": "requested_dates",
-                        "HTML_DESCRIPTION": "html_description",
-                        "COLOR": "color",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "TEAM": "team",
                         "REQUESTED_ROLES": "requested_roles",
+                        "NAME": "name",
+                        "REQUESTED_DATES": "requested_dates",
+                        "COLOR": "color",
+                        "HTML_DESCRIPTION": "html_description",
                         "OWNER": "owner",
+                        "TEAM": "team",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -196,7 +196,7 @@ class ProjectTemplatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -238,14 +238,14 @@ class ProjectTemplatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "REQUESTED_DATES": "requested_dates",
-                        "HTML_DESCRIPTION": "html_description",
-                        "COLOR": "color",
-                        "NAME": "name",
                         "PUBLIC": "public",
-                        "TEAM": "team",
                         "REQUESTED_ROLES": "requested_roles",
+                        "NAME": "name",
+                        "REQUESTED_DATES": "requested_dates",
+                        "COLOR": "color",
+                        "HTML_DESCRIPTION": "html_description",
                         "OWNER": "owner",
+                        "TEAM": "team",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -281,7 +281,7 @@ class ProjectTemplatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -322,12 +322,12 @@ class ProjectTemplatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "NEW_PROJECT": "new_project",
                         "STATUS": "status",
                         "RESOURCE_SUBTYPE": "resource_subtype",
-                        "NEW_PROJECT_TEMPLATE": "new_project_template",
-                        "NEW_TASK": "new_task",
                         "NEW_TASK_TEMPLATE": "new_task_template",
-                        "NEW_PROJECT": "new_project"
+                        "NEW_PROJECT_TEMPLATE": "new_project_template",
+                        "NEW_TASK": "new_task"
                     },
                 },
                 'openapi_types': {
@@ -357,10 +357,10 @@ class ProjectTemplatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

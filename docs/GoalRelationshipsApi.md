@@ -46,7 +46,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddSupportingRelationshipRequest | The supporting resource to be added to the goal
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["supporting_resource","supported_goal","contribution_weight","resource_subtype"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["supporting_resource","contribution_weight","resource_subtype","supported_goal"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -85,8 +85,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -129,7 +129,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = goal_relationships_api.GoalRelationshipsApi(api_client)
     goal_relationship_gid = "12345" # str | Globally unique identifier for the goal relationship.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["supporting_resource","supported_goal","contribution_weight","resource_subtype"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["supporting_resource","contribution_weight","resource_subtype","supported_goal"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -212,7 +212,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     supported_goal = "12345" # str | Globally unique identifier for the supported goal in the goal relationship.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     resource_subtype = "subgoal" # str | If provided, filter to goal relationships with a given resource_subtype. (optional)
-    opt_fields = ["supporting_resource","supported_goal","contribution_weight","resource_subtype"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["supporting_resource","contribution_weight","resource_subtype","supported_goal"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -337,8 +337,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -381,10 +381,12 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = goal_relationships_api.GoalRelationshipsApi(api_client)
     goal_relationship_gid = "12345" # str | Globally unique identifier for the goal relationship.
     update_goal_relationship_request = UpdateGoalRelationshipRequest(
-        data=GoalRelationshipRequest(None),
+        data=GoalRelationshipRequest(
+            contribution_weight=1,
+        ),
     ) # UpdateGoalRelationshipRequest | The updated fields for the goal relationship.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["supporting_resource","supported_goal","contribution_weight","resource_subtype"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["supporting_resource","contribution_weight","resource_subtype","supported_goal"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -423,8 +425,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

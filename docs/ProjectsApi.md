@@ -60,7 +60,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddCustomFieldSettingForPortfolioRequest | Information about the custom field setting.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["is_important","custom_field","project","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["project","is_important","custom_field","parent"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -99,8 +99,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -148,7 +148,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddFollowersForProjectRequest | Information about the followers being added.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -187,8 +187,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -236,7 +236,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # AddMembersForPortfolioRequest | Information about the members being added.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -275,8 +275,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -318,10 +318,30 @@ with asana_preview.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     create_project_request = CreateProjectRequest(
-        data=ProjectRequest(None),
+        data=ProjectRequest(
+            name="Stuff to buy",
+            archived=False,
+            color="light-green",
+            current_status=ProjectBaseCurrentStatus(None),
+            current_status_update=ProjectBaseCurrentStatusUpdate(None),
+            default_view="calendar",
+            due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            due_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            html_notes="<body>These are things we need to purchase.</body>",
+            notes="These are things we need to purchase.",
+            public=False,
+            privacy_setting="public_to_workspace",
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            custom_fields={
+                "key": "key_example",
+            },
+            followers="12345,23456",
+            owner="12345",
+            team="12345",
+        ),
     ) # CreateProjectRequest | The project to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -359,8 +379,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -403,10 +423,30 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = projects_api.ProjectsApi(api_client)
     team_gid = "159874" # str | Globally unique identifier for the team.
     create_project_request = CreateProjectRequest(
-        data=ProjectRequest(None),
+        data=ProjectRequest(
+            name="Stuff to buy",
+            archived=False,
+            color="light-green",
+            current_status=ProjectBaseCurrentStatus(None),
+            current_status_update=ProjectBaseCurrentStatusUpdate(None),
+            default_view="calendar",
+            due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            due_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            html_notes="<body>These are things we need to purchase.</body>",
+            notes="These are things we need to purchase.",
+            public=False,
+            privacy_setting="public_to_workspace",
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            custom_fields={
+                "key": "key_example",
+            },
+            followers="12345,23456",
+            owner="12345",
+            team="12345",
+        ),
     ) # CreateProjectRequest | The new project to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -445,8 +485,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -489,10 +529,30 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = projects_api.ProjectsApi(api_client)
     workspace_gid = "12345" # str | Globally unique identifier for the workspace or organization.
     create_project_request = CreateProjectRequest(
-        data=ProjectRequest(None),
+        data=ProjectRequest(
+            name="Stuff to buy",
+            archived=False,
+            color="light-green",
+            current_status=ProjectBaseCurrentStatus(None),
+            current_status_update=ProjectBaseCurrentStatusUpdate(None),
+            default_view="calendar",
+            due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            due_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            html_notes="<body>These are things we need to purchase.</body>",
+            notes="These are things we need to purchase.",
+            public=False,
+            privacy_setting="public_to_workspace",
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            custom_fields={
+                "key": "key_example",
+            },
+            followers="12345,23456",
+            owner="12345",
+            team="12345",
+        ),
     ) # CreateProjectRequest | The new project to create.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -531,8 +591,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -612,7 +672,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -655,7 +715,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = projects_api.ProjectsApi(api_client)
     project_gid = "1331" # str | Globally unique identifier for the project.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["status","resource_subtype","new_project_template","new_task","new_task_template","new_project"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_project","status","resource_subtype","new_task_template","new_project_template","new_task"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
     duplicate_project_request = DuplicateProjectRequest(
         data=ProjectDuplicateRequest(
             name="New Project Name",
@@ -706,8 +766,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -750,7 +810,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = projects_api.ProjectsApi(api_client)
     project_gid = "1331" # str | Globally unique identifier for the project.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -789,7 +849,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -836,7 +896,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     workspace = "1331" # str | The workspace or organization to filter projects on. (optional)
     team = "14916" # str | The team to filter projects on. (optional)
     archived = False # bool | Only return projects whose `archived` field takes on the value of this parameter. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","name","due_on","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     # and optional values
@@ -871,7 +931,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -916,7 +976,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","name","due_on","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -957,7 +1017,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1003,7 +1063,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
     archived = False # bool | Only return projects whose `archived` field takes on the value of this parameter. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","name","due_on","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1045,7 +1105,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1091,7 +1151,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
     archived = False # bool | Only return projects whose `archived` field takes on the value of this parameter. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","name","due_on","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1133,7 +1193,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1178,7 +1238,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
-    opt_fields = ["num_incomplete_tasks","num_completed_milestones","num_tasks","num_milestones","num_incomplete_milestones","num_completed_tasks"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["num_incomplete_milestones","num_incomplete_tasks","num_tasks","num_completed_tasks","num_milestones","num_completed_milestones"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1219,7 +1279,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1270,7 +1330,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # ProjectSaveAsTemplateRequest | Describes the inputs used for creating a project template, such as the resulting project template's name, which team it should be created in.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["status","resource_subtype","new_project_template","new_task","new_task_template","new_project"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["new_project","status","resource_subtype","new_task_template","new_project_template","new_task"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1309,8 +1369,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1395,8 +1455,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1444,7 +1504,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # RemoveFollowersForProjectRequest | Information about the followers being removed.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1483,8 +1543,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1532,7 +1592,7 @@ with asana_preview.ApiClient(configuration) as api_client:
         ),
     ) # RemoveMembersForPortfolioRequest | Information about the members being removed.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1571,8 +1631,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -1615,10 +1675,30 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = projects_api.ProjectsApi(api_client)
     project_gid = "1331" # str | Globally unique identifier for the project.
     create_project_request = CreateProjectRequest(
-        data=ProjectRequest(None),
+        data=ProjectRequest(
+            name="Stuff to buy",
+            archived=False,
+            color="light-green",
+            current_status=ProjectBaseCurrentStatus(None),
+            current_status_update=ProjectBaseCurrentStatusUpdate(None),
+            default_view="calendar",
+            due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            due_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            html_notes="<body>These are things we need to purchase.</body>",
+            notes="These are things we need to purchase.",
+            public=False,
+            privacy_setting="public_to_workspace",
+            start_on=dateutil_parser('Fri Sep 13 17:00:00 PDT 2019').date(),
+            custom_fields={
+                "key": "key_example",
+            },
+            followers="12345,23456",
+            owner="12345",
+            team="12345",
+        ),
     ) # CreateProjectRequest | The updated fields for the project.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["created_at","color","archived","icon","public","default_view","members","project_brief","custom_fields","html_notes","privacy_setting","due_on","name","permalink_url","owner","modified_at","current_status","completed_at","completed_by","current_status_update","workspace","due_date","completed","custom_field_settings","notes","followers","start_on","team","created_from_template"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["current_status","current_status_update","archived","team","members","due_on","modified_at","color","owner","permalink_url","created_from_template","public","html_notes","completed_at","name","completed_by","due_date","privacy_setting","custom_field_settings","notes","workspace","project_brief","created_at","default_view","start_on","custom_fields","icon","completed","followers"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -1657,8 +1737,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

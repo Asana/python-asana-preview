@@ -30,34 +30,34 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.goal_compact import GoalCompact
-    from asana_preview.model.goal_membership_compact import GoalMembershipCompact
-    from asana_preview.model.member_compact import MemberCompact
-    from asana_preview.model.portfolio_compact import PortfolioCompact
-    from asana_preview.model.portfolio_membership_compact import PortfolioMembershipCompact
-    from asana_preview.model.project_compact import ProjectCompact
-    from asana_preview.model.project_membership_response import ProjectMembershipResponse
-    from asana_preview.model.team_compact import TeamCompact
-    from asana_preview.model.team_membership_compact import TeamMembershipCompact
-    from asana_preview.model.user_compact import UserCompact
-    from asana_preview.model.user_task_list_compact import UserTaskListCompact
-    from asana_preview.model.workspace_compact import WorkspaceCompact
-    from asana_preview.model.workspace_membership_response import WorkspaceMembershipResponse
-    from asana_preview.model.workspace_membership_response_all_of_vacation_dates import WorkspaceMembershipResponseAllOfVacationDates
-    globals()['GoalCompact'] = GoalCompact
-    globals()['GoalMembershipCompact'] = GoalMembershipCompact
-    globals()['MemberCompact'] = MemberCompact
-    globals()['PortfolioCompact'] = PortfolioCompact
-    globals()['PortfolioMembershipCompact'] = PortfolioMembershipCompact
-    globals()['ProjectCompact'] = ProjectCompact
-    globals()['ProjectMembershipResponse'] = ProjectMembershipResponse
-    globals()['TeamCompact'] = TeamCompact
-    globals()['TeamMembershipCompact'] = TeamMembershipCompact
-    globals()['UserCompact'] = UserCompact
-    globals()['UserTaskListCompact'] = UserTaskListCompact
-    globals()['WorkspaceCompact'] = WorkspaceCompact
-    globals()['WorkspaceMembershipResponse'] = WorkspaceMembershipResponse
-    globals()['WorkspaceMembershipResponseAllOfVacationDates'] = WorkspaceMembershipResponseAllOfVacationDates
+    from asana_preview.model.custom_field_response_people_value_inner import CustomFieldResponsePeopleValueInner
+    from asana_preview.model.goal_membership_base_goal import GoalMembershipBaseGoal
+    from asana_preview.model.goal_response_team_all_of import GoalResponseTeamAllOf
+    from asana_preview.model.goal_response_workspace import GoalResponseWorkspace
+    from asana_preview.model.job_base_new_project import JobBaseNewProject
+    from asana_preview.model.membership_response_any_of import MembershipResponseAnyOf
+    from asana_preview.model.membership_response_any_of1 import MembershipResponseAnyOf1
+    from asana_preview.model.membership_response_any_of2 import MembershipResponseAnyOf2
+    from asana_preview.model.membership_response_any_of3 import MembershipResponseAnyOf3
+    from asana_preview.model.membership_response_any_of4 import MembershipResponseAnyOf4
+    from asana_preview.model.membership_response_any_of4_user_task_list import MembershipResponseAnyOf4UserTaskList
+    from asana_preview.model.portfolio_membership_base_portfolio import PortfolioMembershipBasePortfolio
+    from asana_preview.model.project_membership_response_member import ProjectMembershipResponseMember
+    from asana_preview.model.workspace_membership_response_vacation_dates import WorkspaceMembershipResponseVacationDates
+    globals()['CustomFieldResponsePeopleValueInner'] = CustomFieldResponsePeopleValueInner
+    globals()['GoalMembershipBaseGoal'] = GoalMembershipBaseGoal
+    globals()['GoalResponseTeamAllOf'] = GoalResponseTeamAllOf
+    globals()['GoalResponseWorkspace'] = GoalResponseWorkspace
+    globals()['JobBaseNewProject'] = JobBaseNewProject
+    globals()['MembershipResponseAnyOf'] = MembershipResponseAnyOf
+    globals()['MembershipResponseAnyOf1'] = MembershipResponseAnyOf1
+    globals()['MembershipResponseAnyOf2'] = MembershipResponseAnyOf2
+    globals()['MembershipResponseAnyOf3'] = MembershipResponseAnyOf3
+    globals()['MembershipResponseAnyOf4'] = MembershipResponseAnyOf4
+    globals()['MembershipResponseAnyOf4UserTaskList'] = MembershipResponseAnyOf4UserTaskList
+    globals()['PortfolioMembershipBasePortfolio'] = PortfolioMembershipBasePortfolio
+    globals()['ProjectMembershipResponseMember'] = ProjectMembershipResponseMember
+    globals()['WorkspaceMembershipResponseVacationDates'] = WorkspaceMembershipResponseVacationDates
 
 
 class MembershipResponse(ModelComposed):
@@ -120,22 +120,22 @@ class MembershipResponse(ModelComposed):
         return {
             'gid': (str,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'user': (UserCompact,),  # noqa: E501
-            'project': (ProjectCompact,),  # noqa: E501
-            'member': (MemberCompact,),  # noqa: E501
+            'user': (CustomFieldResponsePeopleValueInner,),  # noqa: E501
+            'project': (JobBaseNewProject,),  # noqa: E501
+            'member': (ProjectMembershipResponseMember,),  # noqa: E501
             'write_access': (str,),  # noqa: E501
-            'portfolio': (PortfolioCompact,),  # noqa: E501
-            'team': (TeamCompact,),  # noqa: E501
+            'portfolio': (PortfolioMembershipBasePortfolio,),  # noqa: E501
+            'team': (GoalResponseTeamAllOf,),  # noqa: E501
             'is_guest': (bool,),  # noqa: E501
             'is_limited_access': (bool,),  # noqa: E501
             'is_admin': (bool,),  # noqa: E501
-            'goal': (GoalCompact,),  # noqa: E501
+            'goal': (GoalMembershipBaseGoal,),  # noqa: E501
             'is_commenter': (bool,),  # noqa: E501
             'is_editor': (bool,),  # noqa: E501
-            'workspace': (WorkspaceCompact,),  # noqa: E501
-            'user_task_list': (UserTaskListCompact,),  # noqa: E501
+            'workspace': (GoalResponseWorkspace,),  # noqa: E501
+            'user_task_list': (MembershipResponseAnyOf4UserTaskList,),  # noqa: E501
             'is_active': (bool,),  # noqa: E501
-            'vacation_dates': (WorkspaceMembershipResponseAllOfVacationDates,),  # noqa: E501
+            'vacation_dates': (WorkspaceMembershipResponseVacationDates,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
         }
 
@@ -214,22 +214,22 @@ class MembershipResponse(ModelComposed):
                                 _visited_composed_classes = (Animal,)
             gid (str): Globally unique identifier of the resource, as a string.. [optional]  # noqa: E501
             resource_type (str): The base type of this resource.. [optional]  # noqa: E501
-            user (UserCompact): [optional]  # noqa: E501
-            project (ProjectCompact): [optional]  # noqa: E501
-            member (MemberCompact): [optional]  # noqa: E501
+            user (CustomFieldResponsePeopleValueInner): [optional]  # noqa: E501
+            project (JobBaseNewProject): [optional]  # noqa: E501
+            member (ProjectMembershipResponseMember): [optional]  # noqa: E501
             write_access (str): Whether the member has full access, edit access, or comment-only access to the project.. [optional]  # noqa: E501
-            portfolio (PortfolioCompact): [optional]  # noqa: E501
-            team (TeamCompact): [optional]  # noqa: E501
+            portfolio (PortfolioMembershipBasePortfolio): [optional]  # noqa: E501
+            team (GoalResponseTeamAllOf): [optional]  # noqa: E501
             is_guest (bool): Reflects if this user is a guest of the workspace.. [optional]  # noqa: E501
             is_limited_access (bool): Describes if the user has limited access to the team.. [optional]  # noqa: E501
             is_admin (bool): Reflects if this user is an admin of the workspace.. [optional]  # noqa: E501
-            goal (GoalCompact): [optional]  # noqa: E501
+            goal (GoalMembershipBaseGoal): [optional]  # noqa: E501
             is_commenter (bool): Describes if the member is comment only in goal.. [optional]  # noqa: E501
             is_editor (bool): Describes if the member is editor in goal.. [optional]  # noqa: E501
-            workspace (WorkspaceCompact): [optional]  # noqa: E501
-            user_task_list (UserTaskListCompact): [optional]  # noqa: E501
+            workspace (GoalResponseWorkspace): [optional]  # noqa: E501
+            user_task_list (MembershipResponseAnyOf4UserTaskList): [optional]  # noqa: E501
             is_active (bool): Reflects if this user still a member of the workspace.. [optional]  # noqa: E501
-            vacation_dates (WorkspaceMembershipResponseAllOfVacationDates): [optional]  # noqa: E501
+            vacation_dates (WorkspaceMembershipResponseVacationDates): [optional]  # noqa: E501
             created_at (datetime): The time at which this resource was created.. [optional]  # noqa: E501
         """
 
@@ -336,22 +336,22 @@ class MembershipResponse(ModelComposed):
                                 _visited_composed_classes = (Animal,)
             gid (str): Globally unique identifier of the resource, as a string.. [optional]  # noqa: E501
             resource_type (str): The base type of this resource.. [optional]  # noqa: E501
-            user (UserCompact): [optional]  # noqa: E501
-            project (ProjectCompact): [optional]  # noqa: E501
-            member (MemberCompact): [optional]  # noqa: E501
+            user (CustomFieldResponsePeopleValueInner): [optional]  # noqa: E501
+            project (JobBaseNewProject): [optional]  # noqa: E501
+            member (ProjectMembershipResponseMember): [optional]  # noqa: E501
             write_access (str): Whether the member has full access, edit access, or comment-only access to the project.. [optional]  # noqa: E501
-            portfolio (PortfolioCompact): [optional]  # noqa: E501
-            team (TeamCompact): [optional]  # noqa: E501
+            portfolio (PortfolioMembershipBasePortfolio): [optional]  # noqa: E501
+            team (GoalResponseTeamAllOf): [optional]  # noqa: E501
             is_guest (bool): Reflects if this user is a guest of the workspace.. [optional]  # noqa: E501
             is_limited_access (bool): Describes if the user has limited access to the team.. [optional]  # noqa: E501
             is_admin (bool): Reflects if this user is an admin of the workspace.. [optional]  # noqa: E501
-            goal (GoalCompact): [optional]  # noqa: E501
+            goal (GoalMembershipBaseGoal): [optional]  # noqa: E501
             is_commenter (bool): Describes if the member is comment only in goal.. [optional]  # noqa: E501
             is_editor (bool): Describes if the member is editor in goal.. [optional]  # noqa: E501
-            workspace (WorkspaceCompact): [optional]  # noqa: E501
-            user_task_list (UserTaskListCompact): [optional]  # noqa: E501
+            workspace (GoalResponseWorkspace): [optional]  # noqa: E501
+            user_task_list (MembershipResponseAnyOf4UserTaskList): [optional]  # noqa: E501
             is_active (bool): Reflects if this user still a member of the workspace.. [optional]  # noqa: E501
-            vacation_dates (WorkspaceMembershipResponseAllOfVacationDates): [optional]  # noqa: E501
+            vacation_dates (WorkspaceMembershipResponseVacationDates): [optional]  # noqa: E501
             created_at (datetime): The time at which this resource was created.. [optional]  # noqa: E501
         """
 
@@ -420,11 +420,11 @@ class MembershipResponse(ModelComposed):
         lazy_import()
         return {
           'anyOf': [
-              GoalMembershipCompact,
-              PortfolioMembershipCompact,
-              ProjectMembershipResponse,
-              TeamMembershipCompact,
-              WorkspaceMembershipResponse,
+              MembershipResponseAnyOf,
+              MembershipResponseAnyOf1,
+              MembershipResponseAnyOf2,
+              MembershipResponseAnyOf3,
+              MembershipResponseAnyOf4,
           ],
           'allOf': [
           ],

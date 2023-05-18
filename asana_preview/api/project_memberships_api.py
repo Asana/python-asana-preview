@@ -71,10 +71,10 @@ class ProjectMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "MEMBER": "member",
                         "WRITE_ACCESS": "write_access",
-                        "PROJECT": "project",
                         "USER": "user",
-                        "MEMBER": "member"
+                        "PROJECT": "project"
                     },
                 },
                 'openapi_types': {
@@ -101,7 +101,7 @@ class ProjectMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -144,10 +144,10 @@ class ProjectMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "MEMBER": "member",
                         "WRITE_ACCESS": "write_access",
-                        "PROJECT": "project",
                         "USER": "user",
-                        "MEMBER": "member"
+                        "PROJECT": "project"
                     },
                 },
                 'openapi_types': {
@@ -186,7 +186,7 @@ class ProjectMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

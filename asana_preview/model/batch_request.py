@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.batch_request_action import BatchRequestAction
-    globals()['BatchRequestAction'] = BatchRequestAction
+    from asana_preview.model.batch_request_actions_inner import BatchRequestActionsInner
+    globals()['BatchRequestActionsInner'] = BatchRequestActionsInner
 
 
 class BatchRequest(ModelNormal):
@@ -87,7 +87,7 @@ class BatchRequest(ModelNormal):
         """
         lazy_import()
         return {
-            'actions': ([BatchRequestAction],),  # noqa: E501
+            'actions': ([BatchRequestActionsInner],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class BatchRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            actions ([BatchRequestAction]): [optional]  # noqa: E501
+            actions ([BatchRequestActionsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class BatchRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            actions ([BatchRequestAction]): [optional]  # noqa: E501
+            actions ([BatchRequestActionsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

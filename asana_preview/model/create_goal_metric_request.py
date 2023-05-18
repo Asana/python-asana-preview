@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.goal_metric_base import GoalMetricBase
-    globals()['GoalMetricBase'] = GoalMetricBase
+    from asana_preview.model.goal_metric_request import GoalMetricRequest
+    globals()['GoalMetricRequest'] = GoalMetricRequest
 
 
 class CreateGoalMetricRequest(ModelNormal):
@@ -87,7 +87,7 @@ class CreateGoalMetricRequest(ModelNormal):
         """
         lazy_import()
         return {
-            'data': (GoalMetricBase,),  # noqa: E501
+            'data': (GoalMetricRequest,),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class CreateGoalMetricRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (GoalMetricBase): [optional]  # noqa: E501
+            data (GoalMetricRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class CreateGoalMetricRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (GoalMetricBase): [optional]  # noqa: E501
+            data (GoalMetricRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

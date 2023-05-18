@@ -41,12 +41,17 @@ with asana_preview.ApiClient(configuration) as api_client:
             resource="12345",
             target="https://example.com/receive-webhook/7654?app_specific_param=app_specific_value",
             filters=[
-                WebhookRequestFiltersInner(None),
+                WebhookRequestFiltersInner(
+                    resource_type="task",
+                    resource_subtype="milestone",
+                    action="changed",
+                    fields=["due_at","due_on","dependencies"],
+                ),
             ],
         ),
     ) # CreateWebhookRequest | The webhook workspace and target.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["last_failure_content","created_at","resource","last_failure_at","active","target","filters","last_success_at"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["active","resource","last_failure_at","filters","last_failure_content","last_success_at","created_at","target"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -84,8 +89,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -165,7 +170,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -208,7 +213,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     api_instance = webhooks_api.WebhooksApi(api_client)
     webhook_gid = "12345" # str | Globally unique identifier for the webhook.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["last_failure_content","created_at","resource","last_failure_at","active","target","filters","last_success_at"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["active","resource","last_failure_at","filters","last_failure_content","last_success_at","created_at","target"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -247,7 +252,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -293,7 +298,7 @@ with asana_preview.ApiClient(configuration) as api_client:
     limit = 50 # int | Results per page. The number of objects to return per page. The value must be between 1 and 100. (optional)
     offset = "eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9" # str | Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.' (optional)
     resource = "51648" # str | Only return webhooks for the given resource. (optional)
-    opt_fields = ["last_failure_content","created_at","resource","last_failure_at","active","target","filters","last_success_at"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["active","resource","last_failure_at","filters","last_failure_content","last_success_at","created_at","target"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -335,7 +340,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details
@@ -380,12 +385,17 @@ with asana_preview.ApiClient(configuration) as api_client:
     update_webhook_request = UpdateWebhookRequest(
         data=WebhookUpdateRequest(
             filters=[
-                WebhookRequestFiltersInner(None),
+                WebhookRequestFiltersInner(
+                    resource_type="task",
+                    resource_subtype="milestone",
+                    action="changed",
+                    fields=["due_at","due_on","dependencies"],
+                ),
             ],
         ),
     ) # UpdateWebhookRequest | The updated filters for the webhook.
     opt_pretty = True # bool | Provides “pretty” output. Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging. (optional)
-    opt_fields = ["last_failure_content","created_at","resource","last_failure_at","active","target","filters","last_success_at"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+    opt_fields = ["active","resource","last_failure_at","filters","last_failure_content","last_success_at","created_at","target"] # [str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
     # Example passing only required values which don't have defaults set
     try:
@@ -424,8 +434,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json; charset=UTF-8
 
 
 ### HTTP response details

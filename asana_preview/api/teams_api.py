@@ -78,11 +78,11 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "USER": "user",
                         "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
-                        "TEAM": "team",
                         "IS_LIMITED_ACCESS": "is_limited_access",
-                        "USER": "user"
+                        "IS_GUEST": "is_guest",
+                        "TEAM": "team"
                     },
                 },
                 'openapi_types': {
@@ -112,10 +112,10 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -156,17 +156,17 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
+                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
+                        "NAME": "name",
                         "HTML_DESCRIPTION": "html_description",
                         "EDIT_TEAM_NAME_OR_DESCRIPTION_ACCESS_LEVEL": "edit_team_name_or_description_access_level",
                         "MEMBER_INVITE_MANAGEMENT_ACCESS_LEVEL": "member_invite_management_access_level",
-                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
-                        "ORGANIZATION": "organization",
-                        "NAME": "name",
-                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
-                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
-                        "VISIBILITY": "visibility",
                         "PERMALINK_URL": "permalink_url",
-                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "ORGANIZATION": "organization",
+                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
+                        "VISIBILITY": "visibility",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -201,10 +201,10 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -245,17 +245,17 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
+                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
+                        "NAME": "name",
                         "HTML_DESCRIPTION": "html_description",
                         "EDIT_TEAM_NAME_OR_DESCRIPTION_ACCESS_LEVEL": "edit_team_name_or_description_access_level",
                         "MEMBER_INVITE_MANAGEMENT_ACCESS_LEVEL": "member_invite_management_access_level",
-                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
-                        "ORGANIZATION": "organization",
-                        "NAME": "name",
-                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
-                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
-                        "VISIBILITY": "visibility",
                         "PERMALINK_URL": "permalink_url",
-                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "ORGANIZATION": "organization",
+                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
+                        "VISIBILITY": "visibility",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -291,7 +291,7 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -335,17 +335,17 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
+                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
+                        "NAME": "name",
                         "HTML_DESCRIPTION": "html_description",
                         "EDIT_TEAM_NAME_OR_DESCRIPTION_ACCESS_LEVEL": "edit_team_name_or_description_access_level",
                         "MEMBER_INVITE_MANAGEMENT_ACCESS_LEVEL": "member_invite_management_access_level",
-                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
-                        "ORGANIZATION": "organization",
-                        "NAME": "name",
-                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
-                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
-                        "VISIBILITY": "visibility",
                         "PERMALINK_URL": "permalink_url",
-                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "ORGANIZATION": "organization",
+                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
+                        "VISIBILITY": "visibility",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -385,7 +385,7 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -427,17 +427,17 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
+                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
+                        "NAME": "name",
                         "HTML_DESCRIPTION": "html_description",
                         "EDIT_TEAM_NAME_OR_DESCRIPTION_ACCESS_LEVEL": "edit_team_name_or_description_access_level",
                         "MEMBER_INVITE_MANAGEMENT_ACCESS_LEVEL": "member_invite_management_access_level",
-                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
-                        "ORGANIZATION": "organization",
-                        "NAME": "name",
-                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
-                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
-                        "VISIBILITY": "visibility",
                         "PERMALINK_URL": "permalink_url",
-                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "ORGANIZATION": "organization",
+                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
+                        "VISIBILITY": "visibility",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -473,7 +473,7 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -534,10 +534,10 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -578,17 +578,17 @@ class TeamsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
+                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
+                        "NAME": "name",
                         "HTML_DESCRIPTION": "html_description",
                         "EDIT_TEAM_NAME_OR_DESCRIPTION_ACCESS_LEVEL": "edit_team_name_or_description_access_level",
                         "MEMBER_INVITE_MANAGEMENT_ACCESS_LEVEL": "member_invite_management_access_level",
-                        "GUEST_INVITE_MANAGEMENT_ACCESS_LEVEL": "guest_invite_management_access_level",
-                        "ORGANIZATION": "organization",
-                        "NAME": "name",
-                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
-                        "TEAM_MEMBER_REMOVAL_ACCESS_LEVEL": "team_member_removal_access_level",
-                        "VISIBILITY": "visibility",
                         "PERMALINK_URL": "permalink_url",
-                        "EDIT_TEAM_VISIBILITY_OR_TRASH_TEAM_ACCESS_LEVEL": "edit_team_visibility_or_trash_team_access_level",
+                        "ORGANIZATION": "organization",
+                        "JOIN_REQUEST_MANAGEMENT_ACCESS_LEVEL": "join_request_management_access_level",
+                        "VISIBILITY": "visibility",
                         "DESCRIPTION": "description"
                     },
                 },
@@ -623,10 +623,10 @@ class TeamsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.workspace_membership_compact import WorkspaceMembershipCompact
-    globals()['WorkspaceMembershipCompact'] = WorkspaceMembershipCompact
+    from asana_preview.model.workspace_membership_response import WorkspaceMembershipResponse
+    globals()['WorkspaceMembershipResponse'] = WorkspaceMembershipResponse
 
 
 class GetWorkspaceMembershipsForUser200Response(ModelNormal):
@@ -87,7 +87,7 @@ class GetWorkspaceMembershipsForUser200Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([WorkspaceMembershipCompact],),  # noqa: E501
+            'data': ([WorkspaceMembershipResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class GetWorkspaceMembershipsForUser200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([WorkspaceMembershipCompact]): [optional]  # noqa: E501
+            data ([WorkspaceMembershipResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class GetWorkspaceMembershipsForUser200Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([WorkspaceMembershipCompact]): [optional]  # noqa: E501
+            data ([WorkspaceMembershipResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

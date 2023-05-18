@@ -70,12 +70,12 @@ class JobsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "NEW_PROJECT": "new_project",
                         "STATUS": "status",
                         "RESOURCE_SUBTYPE": "resource_subtype",
-                        "NEW_PROJECT_TEMPLATE": "new_project_template",
-                        "NEW_TASK": "new_task",
                         "NEW_TASK_TEMPLATE": "new_task_template",
-                        "NEW_PROJECT": "new_project"
+                        "NEW_PROJECT_TEMPLATE": "new_project_template",
+                        "NEW_TASK": "new_task"
                     },
                 },
                 'openapi_types': {
@@ -102,7 +102,7 @@ class JobsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

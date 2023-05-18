@@ -71,13 +71,13 @@ class EventsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "CREATED_AT": "created_at",
-                        "TYPE": "type",
                         "RESOURCE": "resource",
-                        "ACTION": "action",
+                        "USER": "user",
                         "CHANGE": "change",
-                        "USER": "user"
+                        "TYPE": "type",
+                        "ACTION": "action",
+                        "CREATED_AT": "created_at",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -108,7 +108,7 @@ class EventsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

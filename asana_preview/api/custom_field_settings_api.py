@@ -72,9 +72,9 @@ class CustomFieldSettingsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "PROJECT": "project",
                         "IS_IMPORTANT": "is_important",
                         "CUSTOM_FIELD": "custom_field",
-                        "PROJECT": "project",
                         "PARENT": "parent"
                     },
                 },
@@ -110,7 +110,7 @@ class CustomFieldSettingsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -152,9 +152,9 @@ class CustomFieldSettingsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
+                        "PROJECT": "project",
                         "IS_IMPORTANT": "is_important",
                         "CUSTOM_FIELD": "custom_field",
-                        "PROJECT": "project",
                         "PARENT": "parent"
                     },
                 },
@@ -190,7 +190,7 @@ class CustomFieldSettingsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

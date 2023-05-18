@@ -71,14 +71,14 @@ class WorkspaceMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
                         "IS_ACTIVE": "is_active",
-                        "USER_TASK_LIST": "user_task_list",
+                        "USER": "user",
+                        "IS_ADMIN": "is_admin",
                         "WORKSPACE": "workspace",
-                        "VACATION_DATES": "vacation_dates",
-                        "USER": "user"
+                        "USER_TASK_LIST": "user_task_list",
+                        "CREATED_AT": "created_at",
+                        "IS_GUEST": "is_guest",
+                        "VACATION_DATES": "vacation_dates"
                     },
                 },
                 'openapi_types': {
@@ -105,7 +105,7 @@ class WorkspaceMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -147,14 +147,14 @@ class WorkspaceMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
                         "IS_ACTIVE": "is_active",
-                        "USER_TASK_LIST": "user_task_list",
+                        "USER": "user",
+                        "IS_ADMIN": "is_admin",
                         "WORKSPACE": "workspace",
-                        "VACATION_DATES": "vacation_dates",
-                        "USER": "user"
+                        "USER_TASK_LIST": "user_task_list",
+                        "CREATED_AT": "created_at",
+                        "IS_GUEST": "is_guest",
+                        "VACATION_DATES": "vacation_dates"
                     },
                 },
                 'openapi_types': {
@@ -189,7 +189,7 @@ class WorkspaceMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -232,14 +232,14 @@ class WorkspaceMembershipsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "IS_ADMIN": "is_admin",
-                        "IS_GUEST": "is_guest",
                         "IS_ACTIVE": "is_active",
-                        "USER_TASK_LIST": "user_task_list",
+                        "USER": "user",
+                        "IS_ADMIN": "is_admin",
                         "WORKSPACE": "workspace",
-                        "VACATION_DATES": "vacation_dates",
-                        "USER": "user"
+                        "USER_TASK_LIST": "user_task_list",
+                        "CREATED_AT": "created_at",
+                        "IS_GUEST": "is_guest",
+                        "VACATION_DATES": "vacation_dates"
                     },
                 },
                 'openapi_types': {
@@ -278,7 +278,7 @@ class WorkspaceMembershipsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.organization_export_compact import OrganizationExportCompact
-    globals()['OrganizationExportCompact'] = OrganizationExportCompact
+    from asana_preview.model.organization_export_response import OrganizationExportResponse
+    globals()['OrganizationExportResponse'] = OrganizationExportResponse
 
 
 class CreateOrganizationExport201Response(ModelNormal):
@@ -87,7 +87,7 @@ class CreateOrganizationExport201Response(ModelNormal):
         """
         lazy_import()
         return {
-            'data': (OrganizationExportCompact,),  # noqa: E501
+            'data': (OrganizationExportResponse,),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class CreateOrganizationExport201Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (OrganizationExportCompact): [optional]  # noqa: E501
+            data (OrganizationExportResponse): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class CreateOrganizationExport201Response(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (OrganizationExportCompact): [optional]  # noqa: E501
+            data (OrganizationExportResponse): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -77,23 +77,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
                         "NAME": "name",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -127,10 +127,10 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -171,23 +171,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
                         "NAME": "name",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -217,10 +217,10 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -275,7 +275,7 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -315,23 +315,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
                         "NAME": "name",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -358,7 +358,7 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -403,23 +403,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
                         "NAME": "name",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "DUE_ON": "due_on",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -475,7 +475,7 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -515,23 +515,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
                         "NAME": "name",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
-                        "DUE_ON": "due_on",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -558,7 +558,7 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -600,23 +600,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
                         "NAME": "name",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -646,10 +646,10 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -690,23 +690,23 @@ class GoalsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "STATUS": "status",
-                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
-                        "NUM_LIKES": "num_likes",
+                        "OWNER": "owner",
                         "HTML_NOTES": "html_notes",
-                        "NOTES": "notes",
-                        "WORKSPACE": "workspace",
-                        "FOLLOWERS": "followers",
-                        "TIME_PERIOD": "time_period",
+                        "STATUS": "status",
                         "START_ON": "start_on",
-                        "DUE_ON": "due_on",
-                        "CURRENT_STATUS_UPDATE": "current_status_update",
                         "NAME": "name",
                         "LIKES": "likes",
+                        "CURRENT_STATUS_UPDATE": "current_status_update",
+                        "TIME_PERIOD": "time_period",
+                        "NOTES": "notes",
+                        "WORKSPACE": "workspace",
+                        "DUE_ON": "due_on",
                         "LIKED": "liked",
+                        "IS_WORKSPACE_LEVEL": "is_workspace_level",
                         "METRIC": "metric",
+                        "NUM_LIKES": "num_likes",
                         "TEAM": "team",
-                        "OWNER": "owner"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -736,10 +736,10 @@ class GoalsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client

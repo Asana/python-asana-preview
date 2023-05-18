@@ -1,5 +1,6 @@
 # TaskBase
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. The *task* is the basic object around which many operations in Asana are centered.
 
 ## Properties
 Name | Type | Description | Notes
@@ -12,20 +13,20 @@ Name | Type | Description | Notes
 **assignee_status** | **str** | *Deprecated* Scheduling status of this task for the user it is assigned to. This field can only be set if the assignee is non-null. Setting this field to \&quot;inbox\&quot; or \&quot;upcoming\&quot; inserts it at the top of the section, while the other options will insert at the bottom. | [optional] 
 **completed** | **bool** | True if the task is currently marked complete, false if not. | [optional] 
 **completed_at** | **datetime, none_type** | The time at which this task was completed, or null if the task is incomplete. | [optional] [readonly] 
-**completed_by** | [**UserCompact**](UserCompact.md) |  | [optional] 
+**completed_by** | [**StoryResponseAssignee**](StoryResponseAssignee.md) |  | [optional] 
 **created_at** | **datetime** | The time at which this resource was created. | [optional] [readonly] 
-**dependencies** | [**[AsanaResource]**](AsanaResource.md) | [Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency. | [optional] [readonly] 
-**dependents** | [**[AsanaResource]**](AsanaResource.md) | [Opt In](/docs/inputoutput-options). Array of resources referencing tasks that depend on this task. The objects contain only the ID of the dependent. | [optional] [readonly] 
+**dependencies** | [**[CreateProjectFromAsanaTemplateRequestAllOf]**](CreateProjectFromAsanaTemplateRequestAllOf.md) | [Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency. | [optional] [readonly] 
+**dependents** | [**[CreateProjectFromAsanaTemplateRequestAllOf]**](CreateProjectFromAsanaTemplateRequestAllOf.md) | [Opt In](/docs/inputoutput-options). Array of resources referencing tasks that depend on this task. The objects contain only the ID of the dependent. | [optional] [readonly] 
 **due_at** | **date, none_type** | The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with &#x60;due_on&#x60;. | [optional] 
 **due_on** | **date, none_type** | The localized date on which this task is due, or null if the task has no due date. This takes a date with &#x60;YYYY-MM-DD&#x60; format and should not be used together with &#x60;due_at&#x60;. | [optional] 
-**external** | [**TaskBaseAllOfExternal**](TaskBaseAllOfExternal.md) |  | [optional] 
+**external** | [**TaskBaseExternal**](TaskBaseExternal.md) |  | [optional] 
 **html_notes** | **str** | [Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. | [optional] 
 **hearted** | **bool** | *Deprecated - please use liked instead* True if the task is hearted by the authorized user, false if not. | [optional] [readonly] 
-**hearts** | [**[Like]**](Like.md) | *Deprecated - please use likes instead* Array of likes for users who have hearted this task. | [optional] [readonly] 
+**hearts** | [**[GoalResponseLikesInner]**](GoalResponseLikesInner.md) | *Deprecated - please use likes instead* Array of likes for users who have hearted this task. | [optional] [readonly] 
 **is_rendered_as_separator** | **bool** | [Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true &#x60;section&#x60; objects. If a &#x60;task&#x60; object is rendered this way in any context it will have the property &#x60;is_rendered_as_separator&#x60; set to &#x60;true&#x60;. | [optional] [readonly] 
 **liked** | **bool** | True if the task is liked by the authorized user, false if not. | [optional] 
-**likes** | [**[Like]**](Like.md) | Array of likes for users who have liked this task. | [optional] [readonly] 
-**memberships** | [**[TaskBaseAllOfMemberships]**](TaskBaseAllOfMemberships.md) | *Create-only*. Array of projects this task is associated with and the section it is in. At task creation time, this array can be used to add the task to specific sections. After task creation, these associations can be modified using the &#x60;addProject&#x60; and &#x60;removeProject&#x60; endpoints. Note that over time, more types of memberships may be added to this property. | [optional] [readonly] 
+**likes** | [**[GoalResponseLikesInner]**](GoalResponseLikesInner.md) | Array of likes for users who have liked this task. | [optional] [readonly] 
+**memberships** | [**[TaskBaseMembershipsInner]**](TaskBaseMembershipsInner.md) | *Create-only*. Array of projects this task is associated with and the section it is in. At task creation time, this array can be used to add the task to specific sections. After task creation, these associations can be modified using the &#x60;addProject&#x60; and &#x60;removeProject&#x60; endpoints. Note that over time, more types of memberships may be added to this property. | [optional] [readonly] 
 **modified_at** | **datetime** | The time at which this task was last modified.  The following conditions will change &#x60;modified_at&#x60;:  - story is created on a task - story is trashed on a task - attachment is trashed on a task - task is assigned or unassigned - custom field value is changed - the task itself is trashed - Or if any of the following fields are updated:   - completed   - name   - due_date   - description   - attachments   - items   - schedule_status  The following conditions will _not_ change &#x60;modified_at&#x60;:  - moving to a new container (project, portfolio, etc) - comments being added to the task (but the stories they generate   _will_ affect &#x60;modified_at&#x60;) | [optional] [readonly] 
 **notes** | **str** | Free-form textual information associated with the task (i.e. its description). | [optional] 
 **num_hearts** | **int** | *Deprecated - please use likes instead* The number of users who have hearted this task. | [optional] [readonly] 

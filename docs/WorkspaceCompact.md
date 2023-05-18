@@ -1,5 +1,6 @@
 # WorkspaceCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
 
 ## Properties
 Name | Type | Description | Notes

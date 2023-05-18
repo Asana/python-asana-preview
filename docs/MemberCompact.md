@@ -1,5 +1,6 @@
 # MemberCompact
 
+A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier. A *member* object represents either a team or user.
 
 ## Properties
 Name | Type | Description | Notes

@@ -73,13 +73,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -105,10 +105,10 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -149,13 +149,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -185,10 +185,10 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -253,7 +253,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -295,13 +295,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -336,7 +336,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -376,13 +376,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -417,7 +417,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -459,13 +459,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -500,7 +500,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -542,13 +542,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -583,7 +583,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -625,13 +625,13 @@ class TagsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
+                        "NAME": "name",
                         "COLOR": "color",
                         "NOTES": "notes",
-                        "FOLLOWERS": "followers",
-                        "NAME": "name",
+                        "WORKSPACE": "workspace",
+                        "CREATED_AT": "created_at",
                         "PERMALINK_URL": "permalink_url",
-                        "WORKSPACE": "workspace"
+                        "FOLLOWERS": "followers"
                     },
                 },
                 'openapi_types': {
@@ -666,7 +666,7 @@ class TagsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

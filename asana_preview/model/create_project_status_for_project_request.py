@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.project_status_base import ProjectStatusBase
-    globals()['ProjectStatusBase'] = ProjectStatusBase
+    from asana_preview.model.project_status_request import ProjectStatusRequest
+    globals()['ProjectStatusRequest'] = ProjectStatusRequest
 
 
 class CreateProjectStatusForProjectRequest(ModelNormal):
@@ -87,7 +87,7 @@ class CreateProjectStatusForProjectRequest(ModelNormal):
         """
         lazy_import()
         return {
-            'data': (ProjectStatusBase,),  # noqa: E501
+            'data': (ProjectStatusRequest,),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class CreateProjectStatusForProjectRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (ProjectStatusBase): [optional]  # noqa: E501
+            data (ProjectStatusRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class CreateProjectStatusForProjectRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data (ProjectStatusBase): [optional]  # noqa: E501
+            data (ProjectStatusRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

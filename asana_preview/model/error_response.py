@@ -30,8 +30,8 @@ from asana_preview.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from asana_preview.model.error import Error
-    globals()['Error'] = Error
+    from asana_preview.model.error_response_errors_inner import ErrorResponseErrorsInner
+    globals()['ErrorResponseErrorsInner'] = ErrorResponseErrorsInner
 
 
 class ErrorResponse(ModelNormal):
@@ -87,7 +87,7 @@ class ErrorResponse(ModelNormal):
         """
         lazy_import()
         return {
-            'errors': ([Error],),  # noqa: E501
+            'errors': ([ErrorResponseErrorsInner],),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class ErrorResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            errors ([Error]): [optional]  # noqa: E501
+            errors ([ErrorResponseErrorsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +226,7 @@ class ErrorResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            errors ([Error]): [optional]  # noqa: E501
+            errors ([ErrorResponseErrorsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

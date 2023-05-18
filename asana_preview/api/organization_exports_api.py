@@ -73,10 +73,10 @@ class OrganizationExportsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "ORGANIZATION": "organization",
                         "DOWNLOAD_URL": "download_url",
-                        "STATE": "state"
+                        "ORGANIZATION": "organization",
+                        "STATE": "state",
+                        "CREATED_AT": "created_at"
                     },
                 },
                 'openapi_types': {
@@ -110,10 +110,10 @@ class OrganizationExportsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -152,10 +152,10 @@ class OrganizationExportsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "CREATED_AT": "created_at",
-                        "ORGANIZATION": "organization",
                         "DOWNLOAD_URL": "download_url",
-                        "STATE": "state"
+                        "ORGANIZATION": "organization",
+                        "STATE": "state",
+                        "CREATED_AT": "created_at"
                     },
                 },
                 'openapi_types': {
@@ -182,7 +182,7 @@ class OrganizationExportsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

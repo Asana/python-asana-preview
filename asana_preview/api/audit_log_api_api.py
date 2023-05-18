@@ -86,13 +86,13 @@ class AuditLogAPIApi(object):
                     },
                     ('opt_fields',): {
 
+                        "RESOURCE": "resource",
+                        "CONTEXT": "context",
+                        "EVENT_TYPE": "event_type",
+                        "ACTOR": "actor",
                         "EVENT_CATEGORY": "event_category",
                         "CREATED_AT": "created_at",
-                        "RESOURCE": "resource",
-                        "EVENT_TYPE": "event_type",
-                        "DETAILS": "details",
-                        "ACTOR": "actor",
-                        "CONTEXT": "context"
+                        "DETAILS": "details"
                     },
                 },
                 'openapi_types': {
@@ -147,7 +147,7 @@ class AuditLogAPIApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

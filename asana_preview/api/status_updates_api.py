@@ -75,22 +75,22 @@ class StatusUpdatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "NUM_LIKES": "num_likes",
-                        "AUTHOR": "author",
-                        "CREATED_AT": "created_at",
+                        "HEARTS": "hearts",
+                        "HTML_TEXT": "html_text",
                         "CREATED_BY": "created_by",
-                        "MODIFIED_AT": "modified_at",
+                        "STATUS_TYPE": "status_type",
+                        "TITLE": "title",
                         "NUM_HEARTS": "num_hearts",
                         "RESOURCE_SUBTYPE": "resource_subtype",
-                        "STATUS_TYPE": "status_type",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
-                        "HEARTS": "hearts",
                         "LIKES": "likes",
+                        "MODIFIED_AT": "modified_at",
+                        "TEXT": "text",
+                        "CREATED_AT": "created_at",
                         "LIKED": "liked",
-                        "TITLE": "title",
-                        "HEARTED": "hearted"
+                        "HEARTED": "hearted",
+                        "AUTHOR": "author",
+                        "NUM_LIKES": "num_likes",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -124,10 +124,10 @@ class StatusUpdatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -182,7 +182,7 @@ class StatusUpdatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -222,22 +222,22 @@ class StatusUpdatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "NUM_LIKES": "num_likes",
-                        "AUTHOR": "author",
-                        "CREATED_AT": "created_at",
+                        "HEARTS": "hearts",
+                        "HTML_TEXT": "html_text",
                         "CREATED_BY": "created_by",
-                        "MODIFIED_AT": "modified_at",
+                        "STATUS_TYPE": "status_type",
+                        "TITLE": "title",
                         "NUM_HEARTS": "num_hearts",
                         "RESOURCE_SUBTYPE": "resource_subtype",
-                        "STATUS_TYPE": "status_type",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
-                        "HEARTS": "hearts",
                         "LIKES": "likes",
+                        "MODIFIED_AT": "modified_at",
+                        "TEXT": "text",
+                        "CREATED_AT": "created_at",
                         "LIKED": "liked",
-                        "TITLE": "title",
-                        "HEARTED": "hearted"
+                        "HEARTED": "hearted",
+                        "AUTHOR": "author",
+                        "NUM_LIKES": "num_likes",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -264,7 +264,7 @@ class StatusUpdatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -307,22 +307,22 @@ class StatusUpdatesApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "PARENT": "parent",
-                        "NUM_LIKES": "num_likes",
-                        "CREATED_AT": "created_at",
-                        "AUTHOR": "author",
-                        "CREATED_BY": "created_by",
-                        "MODIFIED_AT": "modified_at",
-                        "RESOURCE_SUBTYPE": "resource_subtype",
-                        "NUM_HEARTS": "num_hearts",
-                        "STATUS_TYPE": "status_type",
-                        "TEXT": "text",
-                        "HTML_TEXT": "html_text",
                         "HEARTS": "hearts",
-                        "LIKES": "likes",
-                        "LIKED": "liked",
+                        "HTML_TEXT": "html_text",
+                        "CREATED_BY": "created_by",
+                        "STATUS_TYPE": "status_type",
                         "TITLE": "title",
-                        "HEARTED": "hearted"
+                        "NUM_HEARTS": "num_hearts",
+                        "RESOURCE_SUBTYPE": "resource_subtype",
+                        "LIKES": "likes",
+                        "MODIFIED_AT": "modified_at",
+                        "TEXT": "text",
+                        "CREATED_AT": "created_at",
+                        "LIKED": "liked",
+                        "HEARTED": "hearted",
+                        "AUTHOR": "author",
+                        "NUM_LIKES": "num_likes",
+                        "PARENT": "parent"
                     },
                 },
                 'openapi_types': {
@@ -361,7 +361,7 @@ class StatusUpdatesApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },

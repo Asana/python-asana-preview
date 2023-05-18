@@ -74,11 +74,11 @@ class ProjectBriefsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "TEXT": "text",
                         "HTML_TEXT": "html_text",
+                        "TITLE": "title",
                         "PROJECT": "project",
                         "PERMALINK_URL": "permalink_url",
-                        "TITLE": "title"
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -108,10 +108,10 @@ class ProjectBriefsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
@@ -166,7 +166,7 @@ class ProjectBriefsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -206,11 +206,11 @@ class ProjectBriefsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "TEXT": "text",
                         "HTML_TEXT": "html_text",
+                        "TITLE": "title",
                         "PROJECT": "project",
                         "PERMALINK_URL": "permalink_url",
-                        "TITLE": "title"
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -237,7 +237,7 @@ class ProjectBriefsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [],
             },
@@ -279,11 +279,11 @@ class ProjectBriefsApi(object):
                 'allowed_values': {
                     ('opt_fields',): {
 
-                        "TEXT": "text",
                         "HTML_TEXT": "html_text",
+                        "TITLE": "title",
                         "PROJECT": "project",
                         "PERMALINK_URL": "permalink_url",
-                        "TITLE": "title"
+                        "TEXT": "text"
                     },
                 },
                 'openapi_types': {
@@ -313,10 +313,10 @@ class ProjectBriefsApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ],
                 'content_type': [
-                    'application/json'
+                    'application/json; charset=UTF-8'
                 ]
             },
             api_client=api_client
