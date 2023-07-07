@@ -488,7 +488,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = asana_preview.TasksApi(asana_preview.ApiClient(configuration))
 body = asana_preview.TaskGidDuplicateBody() # TaskGidDuplicateBody | Describes the duplicate's name and the fields that will be duplicated.
 task_gid = '321654' # str | The task to operate on.
-opt_fields = ['[\"new_project\",\"new_project.name\",\"new_project_template\",\"new_project_template.name\",\"new_task\",\"new_task.name\",\"new_task.resource_subtype\",\"new_task_template\",\"resource_subtype\",\"status\"]'] # list[str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+opt_fields = ['[\"new_project\",\"new_project.name\",\"new_project_template\",\"new_project_template.name\",\"new_task\",\"new_task.name\",\"new_task.resource_subtype\",\"resource_subtype\",\"status\"]'] # list[str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
 try:
     # Duplicate a task

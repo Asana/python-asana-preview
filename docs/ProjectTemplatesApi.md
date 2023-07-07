@@ -257,7 +257,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = asana_preview.ProjectTemplatesApi(asana_preview.ApiClient(configuration))
 project_template_gid = '1331' # str | Globally unique identifier for the project template.
 body = asana_preview.ProjectTemplateGidInstantiateProjectBody() # ProjectTemplateGidInstantiateProjectBody | Describes the inputs used for instantiating a project, such as the resulting project's name, which team it should be created in, and values for date variables. (optional)
-opt_fields = ['[\"new_project\",\"new_project.name\",\"new_project_template\",\"new_project_template.name\",\"new_task\",\"new_task.name\",\"new_task.resource_subtype\",\"new_task_template\",\"resource_subtype\",\"status\"]'] # list[str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
+opt_fields = ['[\"new_project\",\"new_project.name\",\"new_project_template\",\"new_project_template.name\",\"new_task\",\"new_task.name\",\"new_task.resource_subtype\",\"resource_subtype\",\"status\"]'] # list[str] | This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)
 
 try:
     # Instantiate a project from a project template

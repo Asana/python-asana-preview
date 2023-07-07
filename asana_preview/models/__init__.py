@@ -143,6 +143,8 @@ from asana_preview.models.goal_response_workspace import GoalResponseWorkspace
 from asana_preview.models.goal_update_request import GoalUpdateRequest
 from asana_preview.models.goals_body import GoalsBody
 from asana_preview.models.goals_goal_gid_body import GoalsGoalGidBody
+from asana_preview.models.inline_response412 import InlineResponse412
+from asana_preview.models.inline_response412_errors import InlineResponse412Errors
 from asana_preview.models.job_base import JobBase
 from asana_preview.models.job_base_new_project import JobBaseNewProject
 from asana_preview.models.job_base_new_project_template import JobBaseNewProjectTemplate
@@ -158,7 +160,6 @@ from asana_preview.models.membership_response_array import MembershipResponseArr
 from asana_preview.models.membership_response_data import MembershipResponseData
 from asana_preview.models.memberships_body import MembershipsBody
 from asana_preview.models.memberships_membership_gid_body import MembershipsMembershipGidBody
-from asana_preview.models.message_base_data import MessageBaseData
 from asana_preview.models.modify_dependencies_request import ModifyDependenciesRequest
 from asana_preview.models.modify_dependents_request import ModifyDependentsRequest
 from asana_preview.models.organization_export_base import OrganizationExportBase

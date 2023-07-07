@@ -108,7 +108,7 @@ class ProjectDuplicateRequest(object):
     def include(self):
         """Gets the include of this ProjectDuplicateRequest.  # noqa: E501
 
-        The elements that will be duplicated to the new project. Tasks are always included.  # noqa: E501
+        A comma-separated list of elements that will be duplicated to the new project. Tasks are always included. ##### Fields - forms - members - notes - task_assignee - task_attachments - task_dates - task_dependencies - task_followers - task_notes - task_projects - task_subtasks - task_tags  # noqa: E501
 
         :return: The include of this ProjectDuplicateRequest.  # noqa: E501
         :rtype: str
@@ -119,17 +119,11 @@ class ProjectDuplicateRequest(object):
     def include(self, include):
         """Sets the include of this ProjectDuplicateRequest.
 
-        The elements that will be duplicated to the new project. Tasks are always included.  # noqa: E501
+        A comma-separated list of elements that will be duplicated to the new project. Tasks are always included. ##### Fields - forms - members - notes - task_assignee - task_attachments - task_dates - task_dependencies - task_followers - task_notes - task_projects - task_subtasks - task_tags  # noqa: E501
 
         :param include: The include of this ProjectDuplicateRequest.  # noqa: E501
         :type: str
         """
-        allowed_values = ["members", "notes", "forms", "task_notes", "task_assignee", "task_subtasks", "task_attachments", "task_dates", "task_dependencies", "task_followers", "task_tags", "task_projects"]  # noqa: E501
-        if include not in allowed_values:
-            raise ValueError(
-                "Invalid value for `include` ({0}), must be one of {1}"  # noqa: E501
-                .format(include, allowed_values)
-            )
 
         self._include = include
 
